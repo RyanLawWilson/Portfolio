@@ -1,0 +1,201 @@
+body {
+    margin: 0%;
+    color: red;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 1px 1px black;
+}
+
+/**************************
+    Navbar
+***************************/
+.navBar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: black;
+    overflow: hidden;
+}
+
+.navBar a {
+    float: left;
+    display: block;
+    font-size: 22px;
+    text-decoration: none;
+    color: red;
+    padding: 15px;
+}
+
+.navBar a.homeButton {
+    background-color: darkblue;
+}
+
+.navBar a:hover {
+    background-color: rgb(255, 238, 0);
+    font-weight: bolder;
+    text-shadow: 2px 2px black;
+}
+
+/*************************************
+    Background Video and Video text
+***************************************/
+#background_video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    z-index: -1;
+}
+
+.video-text {
+    /*For some reason, most likely because of the video, if this width is set to 100%,
+        part of the page will be cut off on the right.  Horizontal scrollbars show up.*/
+    width: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 25%;
+    padding: 20px 20px;
+}
+
+.video-text p {
+    padding: 0px 400px 0px 400px;
+}
+
+/**************************
+    Rows and Columns
+***************************/
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column1, .column2 {
+    float: left;
+    width: 50%;
+    height: 450px;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+.column1 {
+    background-color: black;
+}
+
+.column2 {
+    background-color: grey;
+}
+
+/**************************
+    Images
+***************************/
+img {
+    max-width: 100%; /*If this is not max-width. The image gets messed up.*/
+    height: 400px;
+    border-radius: 8px;
+    /*Apparently, margin auto only works when you are dispaying as block*/
+    margin: auto;
+    display: block;
+
+    /* border-radius: 8px; 
+    max-width: 100%; 
+    height: 340px; 
+	margin-left: auto;
+    margin-right: auto;
+	display: block; */
+}
+
+/**************************
+    form formatting
+***************************/
+label {
+    color: black;
+}
+
+form {
+    border-radius: 5px;
+    background-color: rgb(110, 110, 110);
+    padding: 20px 100px 20px 100px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-top: 8px;
+    margin-bottom: 14px;
+}
+
+input[type=submit] {
+    width: 100px;
+    display: block;
+    margin: auto;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 3px;
+    box-sizing: border-box;
+    transition: transform 1s ease-out, width 1s ease-in;
+}
+
+
+/**************************
+    footer
+***************************/
+footer {
+    background-color: black;
+    height: 100px;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+
+/***************************************
+    Some simple styling and animations 
+***************************************/
+.text-center {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+    padding: 0px 40px 0px 40px;
+}
+
+div {
+    display: block;
+    box-sizing: border-box; /*You can't add any margins or padding without this.*/
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img:hover {
+    transition: transform 0.75s linear;
+    transform: scale(1.1);
+}
+
+h1:hover {
+    font-weight: 100;
+}
+
+input[type=submit]:hover {
+    
+    transform: scale(1.25);
+    width: 150px;
+    background-color: black;
+    color: white
+}
+
+p:hover {
+    transition: transform 0.5s;
+    transform: scaleY(1.1);
+    /* transform: skewY(1deg); */
+}
