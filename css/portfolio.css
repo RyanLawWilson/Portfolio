@@ -57,7 +57,7 @@ body {
 }
 
 .video-text p {
-    padding: 0px 400px 0px 400px;
+    padding: 0px 200px 0px 200px;
 }
 
 /**************************
@@ -160,6 +160,7 @@ footer {
 }
 
 h1 {
+    padding-top: 20px;
     text-align: center;
 }
 
