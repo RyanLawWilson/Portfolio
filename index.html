@@ -3,17 +3,29 @@
 	<head>
 		<title>Ryan's Portfolio</title>
 		<meta charset = "utf-8">
-		<link rel="stylesheet" type="text/css" href="css/portfolio.css">
+        <link rel="stylesheet" type="text/css" href="css/portfolio.css">
+        <script src="js/portfolio.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 	</head>
-	<body>
+	<body class="Background">
         
+        <script>
+            document.body.className += " fade-out";
+            $(function() {
+                $("body").removeClass("fade-out");
+            });
+        </script>
+
         <!-- Nav Bar -->
         <div class="navBar">
-            <a class="homeButton" href="#home" >Home</a>
-            <a href="#about">About</a>
-            <a href="#github">GitHub</a>
-            <a href="#contact">Contact</a>
+            <a class="active" href="#Home">Home</a> 
+            <a href="#Slideshow">Slideshow</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">GitHub</a>
+            <a onclick="openForm()">Contact</a>
         </div>
+
+        <div class="btn cancel" onclick="closeForm()"></div>
 
         <!-- These breaks are to make the page to back to the top when you click home -->
         <br>
@@ -40,6 +52,104 @@
                 Thanks you for stopping by!<br><br>
             </p>
         </div>
+
+
+
+    <div id="Slideshow">
+        <div id="Slideshow_Background"> 
+            <div id="Slideshow_Container">
+            
+                <div class="mySlides fade">
+                    <div class="Slide_Number">1 / 6</div>
+                    <img class="Slide_Show_Images" src="images/frustrated.jpg" style="width:100%">
+                        <div class="text">Need help with a project?</div>
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="Slide_Number">2 / 6</div>
+                    <img class="Slide_Show_Images" src="images/bigbrain.jpg" style="width:100%">
+                        <div class="text">I am a full-stack software developer, trained in: HTML, CSS, JavaScript, Java, C#, SQL and more</div>
+                </div>
+        
+                <div class="mySlides fade">
+                    <div class="Slide_Number">3 / 6</div>
+                    <img class="Slide_Show_Images" src="images/python.jpg" style="width:100%">
+                        <div class="text">the popular programming language Python,</div>
+                </div>
+        
+                <div class="mySlides fade">
+                    <div class="Slide_Number">4 / 6</div>
+                    <img class="Slide_Show_Images" src="Stylesheet/Images/C_Sharp_and_Dot_NET.png" style="width:100%">
+                        <div class="text">C#, .NET Framework, ASP.NET, MVC,</div>
+                </div>
+        
+                <div class="mySlides fade">
+                    <div class="Slide_Number">5 / 6</div>
+                    <img class="Slide_Show_Images" src="Stylesheet/Images/SQL_and_Database.jpg" style="width:100%">
+                        <div class="text">back end development, databases and SQL.</div>
+                    </div>
+        
+                <div class="mySlides fade">
+                    <div class="Slide_Number">6 / 6</div>
+                    <img class="Slide_Show_Images" src="Stylesheet/Images/Coding_1.jpg" style="width:100%">
+                        <div class="text"> 
+                        <a onclick="openForm()" href="#Contact" style="color:white;">Contact me now!</a>
+                        </div>
+                </div>
+            
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                
+            </div>
+            <br>
+        
+            <div style="text-align:center">
+            
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                <span class="dot" onclick="currentSlide(4)"></span> 
+                <span class="dot" onclick="currentSlide(5)"></span> 
+                <span class="dot" onclick="currentSlide(6)"></span> 
+        
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+
+
 
         <!-- About -->
         <div class="row" id="about">
@@ -76,20 +186,27 @@
         </div>
 
         <!-- Contact -->
-        <div class="row">
-            <div class="column1">
-                <img src="images/email.jpg" alt="">
-            </div>
-            <div class="column2">
-                <h1 id="contact">Contact</h1>
-                <form action method="get">
-                    <label>Name:</label>
-                    <input type="text" id="name" name="Name" placeholder="Enter your name">
-                    <label>Email:</label>
-                    <input type="text" id="email" name="Email" placeholder="Enter your email">
-                    <label>Message:</label>
-                    <input type="text" id="message" name="Message" placeholder="Enter your message">
-                    <input type="submit" value="submit">
+        <div id="contact"> 
+            <button onclick="openForm()" class="Pop_Up_Button"> CONTACT </button>
+            
+            <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container"> <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
+                    <h1>Contact</h1>
+
+                    <label for="name"><b>Name</b></label>
+                    <input type="text" placeholder="Type your name here" name="name" required>
+                    
+                    <label for="phone"><b>Phone</b></label>
+                    <input type="text" placeholder="Enter your phone number here" name="phone">
+                    
+                    <label for="email"><b>Email</b></label>		
+                    <input type="text" placeholder="Type your email address here" name="email" required>
+                    
+                    <label for="message"><b>Message</b></label>
+                    <input type="text" placeholder="Type your message here" name="message">
+                    
+                    <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
                 </form>
             </div>
         </div>
