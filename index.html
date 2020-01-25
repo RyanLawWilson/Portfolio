@@ -21,6 +21,7 @@
             <a class="active" href="#Home">Home</a> 
             <a href="#Slideshow">Slideshow</a>
             <a href="#About">About</a>
+            <a href="#SQL" style="letter-spacing: 10px;">SQL</a>
             <a href="#GitHub">GitHub</a>
             <a onclick="openForm()">Contact</a>
         </div>
@@ -32,7 +33,7 @@
 		<br>
 
         <!-- Background Video -->
-        <div id="home">
+        <div id="Home">
             <video autoplay muted loop id="background_video">
                 <source src="videos/Typing.mp4" type="">
             </video>
@@ -55,66 +56,66 @@
 
 
 
-    <div id="Slideshow">
-        <div id="Slideshow_Background"> 
-            <div id="Slideshow_Container">
-            
-                <div class="mySlides fade">
-                    <div class="Slide_Number">1 / 6</div>
-                    <img class="Slide_Show_Images" src="images/frustrated.jpg" style="width:100%">
-                        <div class="text">Need help with a project?</div>
-                </div>
+        <div id="Slideshow">
+            <div id="Slideshow_Background"> 
+                <div id="Slideshow_Container">
                 
-                <div class="mySlides fade">
-                    <div class="Slide_Number">2 / 6</div>
-                    <img class="Slide_Show_Images" src="images/bigbrain.jpg" style="width:100%">
-                        <div class="text">I am a full-stack software developer, trained in: HTML, CSS, JavaScript, Java, C#, SQL and more</div>
-                </div>
-        
-                <div class="mySlides fade">
-                    <div class="Slide_Number">3 / 6</div>
-                    <img class="Slide_Show_Images" src="images/python.jpg" style="width:100%">
-                        <div class="text">the popular programming language Python,</div>
-                </div>
-        
-                <div class="mySlides fade">
-                    <div class="Slide_Number">4 / 6</div>
-                    <img class="Slide_Show_Images" src="images/csharp.png" style="width:100%">
-                        <div class="text">C#, .NET Framework, ASP.NET, MVC,</div>
-                </div>
-        
-                <div class="mySlides fade">
-                    <div class="Slide_Number">5 / 6</div>
-                    <img class="Slide_Show_Images" src="images/databases.png" style="width:100%">
-                        <div class="text">back end development, databases and SQL.</div>
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">1 / 6</div>
+                        <img class="Slide_Show_Images" src="images/frustrated.jpg" style="width:100%">
+                            <div class="text">Need help with a project?</div>
                     </div>
-        
-                <div class="mySlides fade">
-                    <div class="Slide_Number">6 / 6</div>
-                    <img class="Slide_Show_Images" src="images/linkedinShot.jpg" style="width:100%">
-                        <div class="text"> 
-                        <a onclick="openForm()" href="#Contact" style="color:white;">Please contact me</a>
+                    
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">2 / 6</div>
+                        <img class="Slide_Show_Images" src="images/bigbrain.jpg" style="width:100%">
+                            <div class="text">I am a full-stack software developer, trained in: HTML, CSS, JavaScript, Java, C#, SQL and more</div>
+                    </div>
+            
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">3 / 6</div>
+                        <img class="Slide_Show_Images" src="images/python.jpg" style="width:100%">
+                            <div class="text">the popular programming language Python,</div>
+                    </div>
+            
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">4 / 6</div>
+                        <img class="Slide_Show_Images" src="images/csharp.png" style="width:100%">
+                            <div class="text">C#, .NET Framework, ASP.NET, MVC,</div>
+                    </div>
+            
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">5 / 6</div>
+                        <img class="Slide_Show_Images" src="images/databases.png" style="width:100%">
+                            <div class="text">back end development, databases and SQL.</div>
                         </div>
-                </div>
             
-                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">6 / 6</div>
+                        <img class="Slide_Show_Images" src="images/linkedinShot.jpg" style="width:100%">
+                            <div class="text"> 
+                            <a onclick="openForm()" href="#Contact" style="color:white;">Please contact me</a>
+                            </div>
+                    </div>
                 
-            </div>
-            <br>
-        
-            <div style="text-align:center">
+                        <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                    
+                </div>
+                <br>
             
-                <span class="dot" onclick="currentSlide(1)"></span> 
-                <span class="dot" onclick="currentSlide(2)"></span> 
-                <span class="dot" onclick="currentSlide(3)"></span> 
-                <span class="dot" onclick="currentSlide(4)"></span> 
-                <span class="dot" onclick="currentSlide(5)"></span> 
-                <span class="dot" onclick="currentSlide(6)"></span> 
-        
+                <div style="text-align:center">
+                
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                    <span class="dot" onclick="currentSlide(4)"></span> 
+                    <span class="dot" onclick="currentSlide(5)"></span> 
+                    <span class="dot" onclick="currentSlide(6)"></span> 
+            
+                </div>
             </div>
         </div>
-    </div>
 
     <script>
         var slideIndex = 6;
@@ -152,7 +153,7 @@
 
 
         <!-- About -->
-        <div class="row" id="about">
+        <div class="row" id="About">
             <div class="column1">
                 <img src="images/laptop.jpg" alt="">
             </div>
@@ -172,21 +173,37 @@
             </div>
         </div>
 
+        <!-- Recent Projects -->
+        <div class="row" id="SQL">
+            <div class="column2">
+                <h1 style="letter-spacing: 2vw;">SQL</h1>
+                <p>
+                    I recently completed the SQL course from The Tech Academy.  I learned a lot
+                    about creating, dropping, and modifying databases and tables.<br><br>
+                
+                    <a href="https://github.com/RyanLawWilson/SQL-Final-Project" target="_blank">Check out my SQL projects!</a>
+                </p>
+            </div>
+            <div class="column1">
+                <img src="images/sqlLogo.png" alt="">
+            </div>
+        </div>
+
         <!-- GitHub -->
-        <div class="row " id="github">
+        <div class="row " id="GitHub">
+            <div class="column1">
+                <img src="images/github_logo.jpg" alt="">
+            </div>
             <div class="column2 text-center">
                 <h1>GitHub</h1>
                 <p>Check out my code and projects:<br>
                     <a href="https://github.com/RyanLawWilson" target="_blank">Ryan's GitHub</a>
                 </p>
             </div>
-            <div class="column1">
-                <img src="images/github_logo.jpg" alt="">
-            </div>
         </div>
 
         <!-- Contact -->
-        <div id="contact"> 
+        <div id="Contact"> 
             <button onclick="openForm()" class="Pop_Up_Button"> CONTACT </button>
             
             <div class="form-popup" id="myForm">
