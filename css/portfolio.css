@@ -25,7 +25,7 @@ body.fade-out {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 3;
     background-color: black;
     overflow: hidden;
     animation: moveNav 5s;

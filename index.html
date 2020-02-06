@@ -22,6 +22,7 @@
             <a href="#Slideshow">Slideshow</a>
             <a href="#About">About</a>
             <a href="#SQL" style="letter-spacing: 10px;">SQL</a>
+            <a href="#Python" style="letter-spacing: 2px;">Python</a>
             <a href="#GitHub">GitHub</a>
             <a onclick="openForm()">Contact</a>
         </div>
@@ -42,8 +43,8 @@
         <div class="video-text text-center">
             <h1>Ryan Wilson's Portfolio</h1>
             <p>
-                This is some text that I will change eventually.  There was a quote here
-                before but it was kinda cheezy.  FILLER TEXT.  FILLER TEXT.  FILLER TEXT.
+                Take a look at the stuff that I've done.  I've programmed in many different
+                languages and built some cool projects in each.  Check them out below.
                 FILLER TEXT.  FILLER TEXT.  FILLER TEXT.  FILLER TEXT.  FILLER TEXT.  
                 FILLER TEXT.  FILLER TEXT.  FILLER TEXT.  FILLER TEXT.<br><br>
                 
@@ -117,6 +118,7 @@
             </div>
         </div>
 
+    <!-- Javascript to make the slideshow work -->
     <script>
         var slideIndex = 6;
         showSlides(slideIndex);
@@ -155,9 +157,6 @@
         <!-- About -->
         <div class="row" id="About">
             <div class="column1">
-                <img src="images/laptop.jpg" alt="">
-            </div>
-            <div class="column2">
                 <h1>About</h1>
                 <p>
                     I am a software developer who enjoys building software.  Video games
@@ -165,17 +164,36 @@
                 
                     I'm still in <a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a>'s software developver bootcamp.  
                     Hopefully I can get a job when I graduate.  These are the 
-                    programming languages that I am familiar with.  
-                    Programming languages: HTML, CSS, JavaScript, SQL, Java.<br><br>
+                    programming languages that I am familiar with:<br>
+                    HTML, CSS, JavaScript, SQL, Java, Python.<br><br>
                 
                     <a href="#contact">Contact</a> me below with any questions.
                 </p>
             </div>
+            <div class="column2">
+                <img src="images/laptop.jpg" alt="">
+            </div>
         </div>
 
-        <!-- Recent Projects -->
-        <div class="row" id="SQL">
+        <!-- Python Project -->
+        <div class="row" id="Python">
             <div class="column2">
+                <img src="images/python-logo.jpg" alt="The Python Logo">
+            </div>
+            <div class="column1">
+                <h1 style="letter-spacing: 0.66vw;">Python</h1>
+                <p>
+                    I completed the Python course from The Tech Academy.  I enjoyed Python a lot 
+                    but I may need some more practice with the django framework.<br><br>
+                
+                    <a href="https://github.com/RyanLawWilson/Python-django-Project/tree/master/mainapp" target="_blank">Check out my Django project</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- SQL Project -->
+        <div class="row" id="SQL">
+            <div class="column1">
                 <h1 style="letter-spacing: 2vw;">SQL</h1>
                 <p>
                     I recently completed the SQL course from The Tech Academy.  I learned a lot
@@ -184,17 +202,17 @@
                     <a href="https://github.com/RyanLawWilson/SQL-Final-Project" target="_blank">Check out my SQL projects!</a>
                 </p>
             </div>
-            <div class="column1">
-                <img src="images/sqlLogo.png" alt="">
+            <div class="column2">
+                <img src="images/sqlLogo.png" alt="A database logo">
             </div>
         </div>
 
         <!-- GitHub -->
         <div class="row " id="GitHub">
-            <div class="column1">
-                <img src="images/github_logo.jpg" alt="">
+            <div class="column2">
+                <img src="images/github_logo.jpg" alt="The GitHub logo">
             </div>
-            <div class="column2 text-center">
+            <div class="column1 text-center">
                 <h1>GitHub</h1>
                 <p>Check out my code and projects:<br>
                     <a href="https://github.com/RyanLawWilson" target="_blank">Ryan's GitHub</a>
