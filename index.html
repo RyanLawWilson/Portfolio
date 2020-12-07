@@ -2,22 +2,90 @@
 <html lang="en">
 	<head>
 		<title>Ryan's Portfolio</title>
-		<meta charset = "utf-8">
-        <link rel="stylesheet" type="text/css" href="css/portfolio.css">
-        <script src="js/portfolio.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-	</head>
-	<body class="Background">
+        <meta charset = "utf-8">
         
-        <script>
-            document.body.className += " fade-out";
-            $(function() {
-                $("body").removeClass("fade-out");
-            });
-        </script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/portfolio.css">
+        
+	</head>
+	<body>
+
+        <div class="row justify-content-center no-gutters text-center">
+            <div class=" btn-main--container"><a href="" class="btn btn-main">Button</a></div>
+            <div class=" btn-main--container"><a href="" class="btn btn-main btn-main--success">Button</a></div>
+            <div class=" btn-main--container"><a href="" class="btn btn-main btn-main--danger">Button</a></div>
+        </div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <!-- Nav Bar -->
-        <div class="navBar">
+        <!-- <div class="navBar">
             <a class="active" href="#Home">Home</a> 
             <a href="#Slideshow">Slideshow</a>
             <a href="#About">About</a>
@@ -26,22 +94,16 @@
             <a href="#CSharp" style="letter-spacing: 3px;">C#</a>
             <a href="#GitHub">GitHub</a>
             <a onclick="openForm()">Contact</a>
-        </div>
-
-        <div class="btn cancel" onclick="closeForm()"></div>
-
-        <!-- These breaks are to make the page to back to the top when you click home -->
-        <br>
-		<br>
+        </div> -->
 
         <!-- Background Video -->
-        <div id="Home">
+        <!-- <div id="Home">
             <video autoplay muted loop id="background_video">
                 <source src="videos/Typing.mp4" type="">
             </video>
-        </div>
+        </div> -->
         <!-- Video Text -->
-        <div class="video-text text-center">
+        <!-- <div class="video-text text-center">
             <h1>Ryan Wilson's Portfolio</h1>
             <p>
                 Take a look at the stuff that I've done.  I've programmed in many different
@@ -54,11 +116,11 @@
 
                 Thank you for stopping by!<br><br>
             </p>
-        </div>
+        </div> -->
 
 
 
-        <div id="Slideshow">
+        <!-- <div id="Slideshow">
             <div id="Slideshow_Background"> 
                 <div id="Slideshow_Container">
                 
@@ -117,10 +179,10 @@
             
                 </div>
             </div>
-        </div>
+        </div> -->
 
     <!-- Javascript to make the slideshow work -->
-    <script>
+    <!-- <script>
         var slideIndex = 6;
         showSlides(slideIndex);
 
@@ -151,12 +213,12 @@
             slides[slideIndex-1].style.display = "block";  
             dots[slideIndex-1].className += " active";
         }
-    </script>
+    </script> -->
 
 
 
         <!-- About -->
-        <div class="row" id="About">
+        <!-- <div class="row" id="About">
             <div class="column1">
                 <h1>About</h1>
                 <p>
@@ -174,10 +236,10 @@
             <div class="column2">
                 <img src="images/laptop.jpg" alt="">
             </div>
-        </div>
+        </div> -->
 
         <!-- Python Project -->
-        <div class="row" id="Python">
+        <!-- <div class="row" id="Python">
             <div class="column2">
                 <img src="images/python-logo.jpg" alt="The Python Logo">
             </div>
@@ -190,10 +252,10 @@
                     <a href="https://github.com/RyanLawWilson/Python-django-Project/tree/master/mainapp" target="_blank">Check out my Django project</a>
                 </p>
             </div>
-        </div>
+        </div> -->
 
         <!-- SQL Project -->
-        <div class="row" id="SQL">
+        <!-- <div class="row" id="SQL">
             <div class="column1">
                 <h1 style="letter-spacing: 2vw;">SQL</h1>
                 <p>
@@ -206,10 +268,10 @@
             <div class="column2">
                 <img src="images/sqlLogo.png" alt="A database logo">
             </div>
-        </div>
+        </div> -->
 
         <!-- C# Project -->
-        <div class="row" id="CSharp">
+        <!-- <div class="row" id="CSharp">
             <div class="column2">
                 <img src="images/csharp.png" alt="A database logo">
             </div>
@@ -222,10 +284,10 @@
                     <a href="https://github.com/RyanLawWilson/TTA-C-Sharp_Assignment_RandomBattles_v2" target="_blank">This is a cool game I made with C#</a>
                 </p>
             </div>
-        </div>
+        </div> -->
 
         <!-- GitHub -->
-        <div class="row " id="GitHub">
+        <!-- <div class="row " id="GitHub">
             <div class="column1 text-center">
                 <h1>GitHub</h1>
                 <p>Check out my code and projects:<br>
@@ -235,15 +297,15 @@
             <div class="column2">
                 <img src="images/github_logo.jpg" alt="The GitHub logo">
             </div>
-        </div>
+        </div> -->
 
         <!-- Contact -->
-        <div id="Contact"> 
+        <!-- <div id="Contact"> 
             <button onclick="openForm()" class="Pop_Up_Button"> CONTACT </button>
             
-            <div class="form-popup" id="myForm">
-                <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container"> <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
-                    <h1>Contact</h1>
+            <div class="form-popup" id="myForm"> -->
+                <!-- <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container"> --> <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
+                    <!-- <h1>Contact</h1>
 
                     <label for="name"><b>Name</b></label>
                     <input type="text" placeholder="Type your name here" name="name" required>
@@ -261,12 +323,17 @@
                     <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
                 </form>
             </div>
-        </div>
+        </div> -->
 
         <!-- Footer -->
-        <footer class="text-center">
+        <!-- <footer class="text-center">
             <p>&copy; askdfja;ksdnfknasdf ;ksadnf , adsfasdf</p>
-        </footer>
+        </footer> -->
 
-	</body>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="js/portfolio.js"></script>
+    </body>
 </html>
