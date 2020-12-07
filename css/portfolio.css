@@ -1,421 +1,114 @@
-html {
-    scroll-behavior: smooth;
+:root {
+    --bg-color--main: rgb(50,49,48);
+    --bg-color--secondary: blue;
+    --text-color--main: rgb(255, 255, 255);
 }
 
 body {
-    margin: 0%;
-    opacity: 1;
-    transition: 3s opacity;
-    letter-spacing: .2vw;
-    font-size: 1.5vw;
-    color: red;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-shadow: 1px 1px black;
+    background-color: var(--bg-color--main);
+    color: var(--text-color--main);
 }
 
-body.fade-out {
-    opacity: .1;
-    transition: none;
+
+
+
+
+
+
+/* === button styles === */
+/* Container surrounding the buttons */
+/* Buttons will not display properly unless they are surrounded by an element with z-index > 2 */
+.btn-main--container {
+    z-index: 5;
 }
 
-/**************************
-    Navbar
-***************************/
-.navBar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 3;
-    background-color: black;
-    overflow: hidden;
-    animation: moveNav 5s;
-}
-
-.navBar a {
-    float: left;
-    display: block;
-    font-size: 22px;
-    text-decoration: none;
-    color: red;
-    padding: 0.75vw 1vw;
-    text-align: center;
+/* This button is made to look 3D and uses a :before pseudo element for styling purposes. */
+/* MUST be used in conjunction with Bootstrap's 'btn' class */
+/* Used this website as a resource: https://tympanus.net/codrops/2012/01/11/css-buttons-with-pseudo-elements/ */
+.btn-main--container > a.btn-main {
+    /* --- Variables --- */
+    /* You can change these values to easily change the look of the buttons */
+    /* Platform refers to the dark gray outline around the button that is created by the :before pseudo element */
+    --platform-height: 3px;
+    --platform-width: 3px;
+    --button-height: 6px;
+    --platform-color: rgb(61, 61, 59); /* Gold-Yellow */
+    --button-bg-color--top: rgb(0, 101, 134); /* light blue */
+    --button-bg-color--sides: rgb(0, 80, 107); /* darkish blue */
+    --button-text-color--default: white;
+    --button-text-color--hover: lightgray;
+    --button-text-color--active: rgb(61, 61, 59); /* Gold-Yellow */
+    /* --- Properties --- */
     position: relative;
-    animation: moveNavText 5.75s;
-    letter-spacing: 0.2vw;
-}
-
-@keyframes moveNav {
-    from {left: -100vw;}
-    to {left: 0vw;}
-}
-
-@keyframes moveNavText {
-    from {top: -100vw;}
-    to {top: 0vw;}
-}
-
-@keyframes moveVideoText {
-    from {top: -100vw;}
-    to {top: 0px;}
-}
-
-.navBar a.homeButton {
-    background-color: darkblue;
-}
-
-.navBar a:hover {
-    background-color: rgb(255, 238, 0);
-    font-weight: bolder;
-    text-shadow: 2px 2px black;
-    cursor: pointer;
-    transition-duration: 1s;
-}
-
-@keyframes zoomInOutSingleFeatured {
-    0% {transform: scale(1.5,1.5)};
-    100% {transform: scale(1,1);}
-}
-
-
-
-/*************************************
-    Background Video and Video text
-***************************************/
-#background_video {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-    animation: zoomInOutSingleFeatured 5s;
-}
-
-.video-text {
-    /*For some reason, most likely because of the video, if this width is set to 100%,
-        part of the page will be cut off on the right.  Horizontal scrollbars show up.*/
-    width: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-    margin-top: 25%;
-    padding-top: 0.1vw;
-    padding-bottom: 0.1vw;
-    position: relative;
-    animation: moveVideoText 4s;
-}
-
-.video-text p {
-    padding: 0px 200px 0px 200px;
-}
-
-#Slideshow_Background {
-    background: rgba(255, 255, 255, 0.35);
-}
-
-.mySlides {
-    display: none;
-}
-
-@keyframes fade {
-    from {opacity: 0.4}
-    to {opacity: 1}
-}
-
-#Slideshow_Container {
-    width: 39.5vw;
-    height: auto;
-    padding-top: 4%;
-    position: relative;
-    margin: auto;
-}
-
-.Slide_Show_Images {
-    vertical-align: middle;
-    height: auto;
-    box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, .75);
-    width: auto;
-}
-
-.Previous, .Next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 2vw;
-    margin-top: -0vw;
-    color: darkgray;
+    background-color: var(--button-bg-color--top);
+    color: var(--button-text-color--default);
+    box-shadow: 0 var(--button-height) 0 var(--button-bg-color--sides);
     font-weight: bold;
-    font-size: 1.5vw;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    transition: 0.6s ease;
+    border-radius: 0.33em;
+    margin: 0.25em;
+    margin-bottom: 0.5em;
 }
 
-.Next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-  
-.Previous:hover, .Next:hover {
-    background-color: rgba(0,0,0,0.8);
-    color: white;
-}
+    /* Removes the blue outline that appears when focusing a button */
+    .btn-main--container > a.btn-main:focus {
+        outline: none;
+    }
 
-/* The text overlaying the image*/
-.text {
-    color: white;
-    padding: 1vw;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    font-family: Perpetua, Rockwell Extra Bold;
-    letter-spacing: .1vw; 
-    font-size: 1.5vw;
-    background-color: rgba(0,0,0,0.75);
-    font-weight: bold;
-    border-radius: 7px 7px 7px 7px;
-}
+    .btn-main--container > a.btn-main:hover, .btn-main--container > a.btn-main:focus {
+        top: calc(var(--button-height) / 2);
+        box-shadow: 0 calc(var(--button-height) / 2) 0 var(--button-bg-color--sides);
+        color: var(--button-text-color--hover);
+    }
 
-/* The number that tells you what slide you are on
-*  Located on the top left of the image.       */
-.Slide_Number {
-    color: white;
-    position: absolute;
-    top: 15%;
-    left: 2%;
-    font-family: Rockwell Extra Bold;
-    letter-spacing: .1vw; 
-    font-size: 1.5vw;
-    font-weight: bold;
-    display: absolute;
-    z-index: 2;
-}
+    .btn-main--container > a.btn-main:active {
+        top: var(--button-height);
+        color: var(--button-text-color--active);
+    }
 
-.dot {
-    cursor: pointer;
-    height: 1vw;
-    width: 1vw;
-    margin: .25vw;
-    background-color: white;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-    position: relative;
-    z-index: 1;
+    /* Pseudo element that represents the dark gray platform below the button */
+    .btn-main--container > a.btn-main::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: var(--platform-height);
+        left: calc(-1 * var(--platform-width));
+        height: calc(100% + 2 * var(--platform-height));
+        width: calc(100% + 2 * var(--platform-width));
+        background-color: var(--platform-color);
+        border-radius: 0.33em;
+    }
+
+    .btn-main--container > a.btn-main:hover::before, .btn-main--container > a.btn-main:focus::before {
+        top: calc(var(--platform-height) - var(--button-height) / 2);
+    }
+
+    .btn-main--container > a.btn-main:active::before {
+        top: calc(var(--platform-height) - var(--button-height));
+    }
+
+/* --- btn-main variants --- */
+/* All variants must be used with btn-main*/
+/* Red variant of the 'btn-main' button */
+.btn-main--container > a.btn-main--danger {
+    background-color: #b61b2b;
+    box-shadow: 0 var(--button-height) 0 #86121e;
 }
 
-.active, .dot:hover {
-    background-color: black;
-}
-  
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;  
-}
+.btn-main--container > a.btn-main--danger:hover, .btn-main--container > a.btn-main--danger:focus {
+        box-shadow: 0 calc(var(--button-height) / 2) 0 #86121e;
+    }
 
-/**************************
-    Rows and Columns
-***************************/
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
+/* Green variant of the 'btn-main' button */
+.btn-main--container > a.btn-main--success {
+    background-color: #147529;
+    box-shadow: 0 var(--button-height) 0 #135e23;
 }
 
-.column1, .column2 {
-    float: left;
-    width: 50%;
-    height: 450px;
-    padding: 1.6%;
-    padding-top: 20px;
-}
+.btn-main--container > a.btn-main--success:hover, .btn-main--container > a.btn-main--success:focus {
+        box-shadow: 0 calc(var(--button-height) / 2) 0 #135e23;
+    }
 
-.column1 {
-    background-color: black;
-}
-
-.column2 {
-    background-color: grey;
-}
-
-/**************************
-    Images
-***************************/
-img {
-    max-width: 100%; /*If this is not max-width. The image gets messed up.*/
-    height: 100%;
-    border-radius: 8px;
-    /*Apparently, margin auto only works when you are dispaying as block*/
-    margin: auto;
-    display: block;
-
-    /* border-radius: 8px; 
-    max-width: 100%; 
-    height: 340px; 
-	margin-left: auto;
-    margin-right: auto;
-	display: block; */
-}
-
-/**************************
-    form formatting
-***************************/
-label {
-    color: black;
-}
-
-form {
-    border-radius: 5px;
-    background-color: rgb(110, 110, 110);
-    padding: 20px 100px 20px 100px;
-}
-
-input[type=text] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 3px;
-    box-sizing: border-box;
-    margin-top: 8px;
-    margin-bottom: 14px;
-}
-
-input[type=submit] {
-    width: 100px;
-    display: block;
-    margin: auto;
-    padding: 10px;
-    cursor: pointer;
-    border: 1px solid black;
-    border-radius: 3px;
-    box-sizing: border-box;
-    transition: transform 1s ease-out, width 1s ease-in;
-}
-
-.Pop_Up_Button {
-    bottom: 1.75vw;
-    right: 1.75vw;
-    width: 25vw;  
-    background-color: white;
-    color: black;
-    border: solid;
-    cursor: pointer;
-    position: fixed;
-    animation: movePopup 5s;
-}
-
-.form-popup {
-    border: 3px solid #f0f1f0;
-    z-index: 8;
-    display: none;
-    position: fixed;
-    bottom: 6px;
-    right: 6px;
-    width: 50%;
-}
-
-.form-container .btn {
-    background-color: white;
-    color: black;
-    border-color: black;
-    margin-bottom:1vh;
-}
-
-.form-container .cancel {
-    background-color: black;
-    color: white;
-    border-color: gray;
-}
-
-button {
-    font-family: "Trebuchet MS", Optima; 
-    letter-spacing: .3vw; 
-    font-size: 1.5vw;
-    font-weight: bold;
-    padding: 1.5vw 1.5vw;
-    border-style: solid;
-    cursor: pointer;
-    width: 100%;
-    height: auto;
-}
-
-button:hover, .form-container .btn:hover{
-    color: white;
-    background-color: black;
-    transition-duration: 1s;
-    border-style: solid;
-    border-color: silver;
-}
-
-.form-container .cancel:hover{
-    color: white;
-    background-color: darkred;
-    transition-duration: 1s;
-    border-style: solid;
-    border-color: black;
-}	
-
-/**************************
-    footer
-***************************/
-footer {
-    background-color: black;
-    height: 100px;
-    box-sizing: border-box;
-    padding-top: 10px;
-    padding-bottom: 50px;
-}
-
-
-.text-center {
-    text-align: center;
-}
-
-h1 {
-    padding-top: 20px;
-    text-align: center;
-}
-
-p {
-    font-size: 20px;
-    padding: 0px 40px 0px 40px;
-}
-
-div {
-    display: block;
-    box-sizing: border-box; /*You can't add any margins or padding without this.*/
-}
-
-* {
-    box-sizing: border-box;
-}
-
-img:hover {
-    transition: transform 0.75s linear;
-    transform: scale(1.1);
-}
-
-@keyframes movePopup {
-    from {right: -40vw;}
-    to {bottom: 1.75vw;}
-}
-
-
-
-h1:hover {
-    font-weight: 100;
-}
-
-input[type=submit]:hover {
-    
-    transform: scale(1.25);
-    width: 150px;
-    background-color: black;
-    color: white
-}
-
-p:hover {
-    transition: transform 0.5s;
-    transform: scaleY(1.1);
-    /* transform: skewY(1deg); */
+/* Turns off box-shadow when the button is clicked */
+.btn-main--container > a.btn-main:active {
+    box-shadow: none;
 }
