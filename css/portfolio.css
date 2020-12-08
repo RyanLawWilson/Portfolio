@@ -2,7 +2,7 @@
     --bg-color--main     : rgb(50, 49, 48);
     --bg-color--secondary: rgb(9, 60, 77);
     --text-color--main   : rgb(255, 255, 255);
-    --box-shadow--color  : rgb(1, 14, 19);
+    --box-shadow--color  : rgb(20, 20, 20);
 }
 
 body {
@@ -33,7 +33,9 @@ body {
     background-color: rgb(5, 0, 51);
     display: flex;
     z-index: 50;
-    border-radius: 0.25em;
+    border-radius: 0 0 0.25em 0.25em;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
     box-shadow: 3px 5px 5px var(--box-shadow--color);
     transition: 0.33s;
 }
