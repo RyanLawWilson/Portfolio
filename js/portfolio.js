@@ -1,26 +1,9 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log("Reading JS");
+$(function() {
+	console.log("Doc Loaded");
+	var $body = $("body");
+	$body.addClass("smooth-load-transition");
+});
 
 
 // Smooth scrolling

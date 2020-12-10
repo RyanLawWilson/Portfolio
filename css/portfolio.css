@@ -8,6 +8,14 @@
 body {
     background-color: var(--bg-color--main);
     color: var(--text-color--main);
+    display: none;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+body.smooth-load-transition {
+    opacity: 1;
+    display: block;
 }
 
 /*****************************
@@ -48,9 +56,57 @@ body {
     font-weight: bolder;
 }
 
-/***********************
-=== Content Section ===
-***********************/
+/************************
+=== Content Sections ===
+************************/
+
+.profile-section {
+    text-align: center;
+    justify-content: center;
+}
+
+.profile-section .welcome-text {
+    font-size: 4em;
+}
+
+h1.section-title {
+    font-weight: bold;
+    
+}
+
+h1.section-title {
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-align: center;
+    font-size: 5em;
+    
+}
+
+@media (max-width: 767px) {
+    .profile-section .welcome-text {
+        font-size: 5em;
+    }
+
+    .profile-section h3 {
+        font-size: 1.25em;
+    }
+
+    h1.section-title {
+        font-size: 4em;
+        letter-spacing: 2px;
+    }
+}
+
+@media (max-width: 500px) {
+    .profile-section .welcome-text {
+        font-size: 3em;
+    }
+
+    h1.section-title {
+        font-size: 3em;
+        letter-spacing: 1px;
+    }
+}
 
 .content-section {
     background-color: rgb(40, 39, 38);
@@ -58,6 +114,29 @@ body {
     padding: 0.5em 0.75em;
     margin-top: 15px;
     box-shadow: 3px 5px 5px var(--box-shadow--color);
+}
+
+/********************
+=== Image Styles ===
+********************/
+
+.img-portfolio {
+    box-shadow: 3px 5px 5px var(--box-shadow--color);
+    margin: 20px;
+    
+}
+
+.img-portfolio--profile {
+    align-self: flex-start;
+    max-width: 400px;
+    min-width: 220px;
+    width: 100%;
+}
+
+@media (max-width: 500px) {
+    .img-portfolio--profile {
+        width: 75%;
+    }
 }
 
 /*********************
