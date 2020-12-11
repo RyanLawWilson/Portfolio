@@ -1,8 +1,29 @@
 console.log("Reading JS");
 $(function() {
+  	// Smooth load in
 	console.log("Doc Loaded");
 	var $body = $("body");
 	$body.addClass("smooth-load-transition");
+
+
+
+	var $buttonContainers = $(".btn-main--container2");
+	var $buttons = $(".btn-main--container2 > .btn.btn-main2");
+	var $platform = $(".btn-main--container2 > .platform");
+	var $buttonHeight = $(".btn-main--container2 > .button-height");
+
+	$buttonContainers.height($buttons.outerHeight());
+	$buttonContainers.width($buttons.outerWidth());
+
+	$buttonHeight.height($buttons.outerHeight());
+	$buttonHeight.width($buttons.outerWidth());
+
+	$platform.height($buttons.outerHeight() + $platform.height());
+	$platform.width($buttons.outerWidth() + $platform.width());
+
+	$buttons.on("mousedown", function() {
+		console.log("Button Clicked!");
+	});
 });
 
 

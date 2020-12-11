@@ -257,3 +257,59 @@ h1.section-title {
 .btn-main--container>a.btn-main:active {
     box-shadow: none;
 }
+
+
+
+
+
+
+
+
+
+
+.btn-main--container2 {
+    position: relative;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.btn-main--container2 > .btn.btn-main2 {
+    position: absolute;
+    background-color: rgb(230, 247, 0);
+    color: black;
+    font-weight: bold;
+    border-radius: 0.33em;
+    top: -6px;
+    left: 0;
+    border: none;
+    transition: top 0.15s, transform 0.15s;
+}
+
+.btn-main--container2 > .btn.btn-main2:hover {
+    top: -4px;
+}
+
+.btn-main--container2 > .btn.btn-main2:active {
+    top: 1px;
+    transform: scaleY(0.85);
+}
+
+.btn-main--container2 > .platform {
+    position: absolute;
+    background-color: rgb(107, 110, 37);
+    z-index: -1;
+    width: 4px;
+    height: 4px;
+    top: -2px;
+    left: -2px;
+    border-radius: 0.33em;
+}
+
+.btn-main--container2 > .button-height {
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(183, 196, 0);
+    border-radius: 0.33em;
+}
