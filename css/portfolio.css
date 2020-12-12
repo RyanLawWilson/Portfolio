@@ -112,7 +112,7 @@ h1.section-title {
     background-color: rgb(40, 39, 38);
     border-radius: 0.5em;
     padding: 0.5em 0.75em;
-    margin-top: 15px;
+    margin: 15px 0 10px 0;
     box-shadow: 3px 5px 5px var(--box-shadow--color);
 }
 
@@ -145,11 +145,7 @@ h1.section-title {
 
 /* Container surrounding the buttons */
 
-/* Buttons will not display properly unless they are surrounded by an element with z-index > 2 */
-
-.btn-main--container {
-    z-index: 0;
-}
+/* Buttons will not display properly unless they are surrounded by this container */
 
 /* This button is made to look 3D and uses a :before pseudo element for styling purposes. */
 
@@ -157,69 +153,77 @@ h1.section-title {
 
 /* Used this website as a resource: https://tympanus.net/codrops/2012/01/11/css-buttons-with-pseudo-elements/ */
 
-.btn-main--container>a.btn-main {
-    /* --- Variables --- */
-    /* You can change these values to easily change the look of the buttons */
-    /* Platform refers to the dark gray outline around the button that is created by the :before pseudo element */
-    --platform-height: 3px;
-    --platform-width: 3px;
-    --button-height: 6px;
-    --platform-color: rgb(61, 61, 59);
-    --button-bg-color--top: rgb(0, 101, 134);
-    --button-bg-color--sides: rgb(0, 80, 107);
-    --button-text-color--default: white;
-    --button-text-color--hover: lightgray;
-    --button-text-color--active: rgb(61, 61, 59);
-    /* --- Properties --- */
+/* btn-main refers to the clickable button, platform refers to the outline around the button,
+platform-wall refers to the area that is revealed when the button is clicked, and finally,
+button-height refers to the area below the button which represents the 3d protrusion of the button */
+
+.btn-main--container {
     position: relative;
-    background-color: var(--button-bg-color--top);
-    color: var(--button-text-color--default);
-    box-shadow: 0 var(--button-height) 0 var(--button-bg-color--sides);
-    font-weight: bold;
-    border-radius: 0.33em;
-    margin: 0.25em;
-    margin-bottom: 0.5em;
+    display: inline-block;
+    margin: 0px 3px 0px 3px;
 }
 
-/* Removes the blue outline that appears when focusing a button */
+.btn-main--container > .btn.btn-main {
+    position: absolute;
+    background-color: rgb(64, 88, 194);
+    color: rgba(255, 255, 255, 1);
+    font-weight: bold;
+    border-radius: 0.33em;
+    top: -6px;
+    left: 0;
+    border: none;
+    transition: top 0.07s, color 1s;
+}
+
+/* Turns off box-shadow when the button is clicked and Removes the blue outline that appears when focusing a button */
 
 .btn-main--container>a.btn-main:focus {
     outline: none;
+    box-shadow: none;
 }
 
-.btn-main--container>a.btn-main:hover,
-.btn-main--container>a.btn-main:focus {
-    top: calc(var(--button-height) / 2);
-    box-shadow: 0 calc(var(--button-height) / 2) 0 var(--button-bg-color--sides);
-    color: var(--button-text-color--hover);
+.btn-main--container > .btn.btn-main:hover {
+    top: -4px;
+    height: 100%;
+    transition: top 0.125s, height 0.15s, color 0.25s, transform 0.05s;
+    color: rgba(255, 255, 255, 0.7);
 }
 
-.btn-main--container>a.btn-main:active {
-    top: var(--button-height);
-    color: var(--button-text-color--active);
+.btn-main--container > .btn.btn-main:active {
+    top: 5px;
+    height: 86%;
+    color: rgba(255, 255, 255, 0.2);
 }
 
-/* Pseudo element that represents the dark gray platform below the button */
-
-.btn-main--container>a.btn-main::before {
-    content: "";
+.btn-main--container > .platform {
     position: absolute;
-    z-index: -1;
-    top: var(--platform-height);
-    left: calc(-1 * var(--platform-width));
-    height: calc(100% + 2 * var(--platform-height));
-    width: calc(100% + 2 * var(--platform-width));
-    background-color: var(--platform-color);
+    background-color: rgba(100, 100, 100, 0.5);
+    z-index: -2;
+    width: 4px;
+    height: 4px;
+    top: -2px;
+    left: -2px;
     border-radius: 0.33em;
 }
 
-.btn-main--container>a.btn-main:hover::before,
-.btn-main--container>a.btn-main:focus::before {
-    top: calc(var(--platform-height) - var(--button-height) / 2);
+.btn-main--container > .platform-wall {
+    position: absolute;
+    background-color: rgb(40, 40, 40);
+    background: linear-gradient(150deg, rgb(60, 60, 60), rgb(40, 40, 40));
+    z-index: -1;
+    border-top-right-radius: 0.33em;
+    border-top-left-radius: 0.33em;
 }
 
-.btn-main--container>a.btn-main:active::before {
-    top: calc(var(--platform-height) - var(--button-height));
+.btn-main--container > .button-height {
+    position: absolute;
+    z-index: -1;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgb(39, 55, 131);
+    background: linear-gradient(150deg, rgb(60, 80, 170), rgb(45, 62, 141));
+    border-bottom-right-radius: 0.33em;
+    border-bottom-left-radius: 0.33em;
 }
 
 /*************************
@@ -230,96 +234,20 @@ h1.section-title {
 
 /* Red variant of the 'btn-main' button */
 
-.btn-main--container>a.btn-main--danger {
+.btn-main--container > .btn.btn-main.btn-main--danger {
     background-color: #b61b2b;
-    box-shadow: 0 var(--button-height) 0 #86121e;
 }
 
-.btn-main--container>a.btn-main--danger:hover,
-.btn-main--container>a.btn-main--danger:focus {
-    box-shadow: 0 calc(var(--button-height) / 2) 0 #86121e;
+.btn-main--container > .btn.btn-main.btn-main--danger ~ .button-height {
+    background: linear-gradient(150deg, #a81a29, #8d131f);
 }
 
 /* Green variant of the 'btn-main' button */
 
-.btn-main--container>a.btn-main--success {
+.btn-main--container > .btn.btn-main.btn-main--success {
     background-color: #147529;
-    box-shadow: 0 var(--button-height) 0 #135e23;
 }
 
-.btn-main--container>a.btn-main--success:hover,
-.btn-main--container>a.btn-main--success:focus {
-    box-shadow: 0 calc(var(--button-height) / 2) 0 #135e23;
-}
-
-/* Turns off box-shadow when the button is clicked */
-
-.btn-main--container>a.btn-main:active {
-    box-shadow: none;
-}
-
-
-
-
-
-
-
-
-
-
-.btn-main--container2 {
-    position: relative;
-    display: inline-block;
-    margin-top: 15px;
-}
-
-.btn-main--container2 > .btn.btn-main2 {
-    position: absolute;
-    background-color: rgb(230, 247, 0);
-    color: black;
-    font-weight: bold;
-    border-radius: 0.33em;
-    top: -6px;
-    left: 0;
-    border: none;
-    transition: top 0.07s, color 3.5s;
-}
-
-.btn-main--container2>a.btn-main2:focus {
-    outline: none;
-    box-shadow: none;
-}
-
-.btn-main--container2 > .btn.btn-main2:hover {
-    top: -4px;
-    height: 100%;
-    transition: top 0.125s, height 0.15s, color 0.25s, transform 0.05s;
-    color: rgb(190, 190, 190);
-}
-
-.btn-main--container2 > .btn.btn-main2:active {
-    top: 5px;
-    height: 86%;
-    color: rgb(20, 136, 9);
-    transform: scaleX(0.97);
-}
-
-.btn-main--container2 > .platform {
-    position: absolute;
-    background-color: rgb(107, 110, 37);
-    z-index: -1;
-    width: 4px;
-    height: 4px;
-    top: -2px;
-    left: -2px;
-    border-radius: 0.33em;
-}
-
-.btn-main--container2 > .button-height {
-    position: absolute;
-    z-index: -1;
-    top: 0px;
-    left: 0px;
-    background-color: rgb(183, 196, 0);
-    border-radius: 0.33em;
+.btn-main--container > .btn.btn-main.btn-main--success ~ .button-height {
+    background: linear-gradient(150deg, #1e7732, #10521e);
 }
