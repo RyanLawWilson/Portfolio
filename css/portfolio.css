@@ -290,8 +290,9 @@ h1.section-title {
 }
 
 .btn-main--container2 > .btn.btn-main2:active {
-    top: 1px;
-    transform: scaleY(0.85);
+    top: 2px;
+    height: 95%;
+    /* transform: scaleY(0.85); */
 }
 
 .btn-main--container2 > .platform {
