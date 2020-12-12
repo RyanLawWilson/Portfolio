@@ -282,17 +282,26 @@ h1.section-title {
     top: -6px;
     left: 0;
     border: none;
-    transition: top 0.15s, transform 0.15s;
+    transition: top 0.07s, color 3.5s;
+}
+
+.btn-main--container2>a.btn-main2:focus {
+    outline: none;
+    box-shadow: none;
 }
 
 .btn-main--container2 > .btn.btn-main2:hover {
     top: -4px;
+    height: 100%;
+    transition: top 0.125s, height 0.15s, color 0.25s, transform 0.05s;
+    color: rgb(190, 190, 190);
 }
 
 .btn-main--container2 > .btn.btn-main2:active {
-    top: 2px;
-    height: 95%;
-    /* transform: scaleY(0.85); */
+    top: 5px;
+    height: 86%;
+    color: rgb(20, 136, 9);
+    transform: scaleX(0.97);
 }
 
 .btn-main--container2 > .platform {
