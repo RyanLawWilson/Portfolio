@@ -23,6 +23,7 @@ function findAndCreateButtons() {
 		if ($(this).attr("data-variant-success") != undefined) variant = " btn-main--success ";
 		else if ($(this).attr("data-variant-danger") != undefined) variant = " btn-main--danger ";
 
+		// If the URL is empty, don't bother putting in href=""
 		url = $(this).attr("data-href") != "" ? "href='" + $(this).attr("data-href") + "'" : ""; 
 
 		$(this).html(
@@ -31,34 +32,62 @@ function findAndCreateButtons() {
 			+ "<div class='button-height'></div>"
 			+ "<div class='platform'></div>"
 			+ "<div class='platform-wall'></div>");
+
+		let $button = $(this).find(".btn.btn-main");
+
+		console.log("Text: " + $(this).attr("data-text"));
+		console.log("Height: " + $button.height());
+
 	});
 }
 
 // Set the width and height of the components of the button.
 function setButtonWidthAndHeight() {
 	let $buttonContainers = $(".btn-main--container");
-	let $buttons = $(".btn-main--container > .btn.btn-main");
-	let $buttonHeight = $(".btn-main--container > .button-height");
-	let $platforms = $(".btn-main--container > .platform");
-	let $platformWalls = $(".btn-main--container > .platform-wall");
+	// var $buttons = $(".btn-main--container > .btn.btn-main");
 
-	$buttonContainers.height($buttons.outerHeight());
-	$buttonContainers.width($buttons.outerWidth());
+	$buttonContainers.each(function() {
+		let $button = $(this).find(".btn.btn-main");
+		let $buttonHeight = $(this).find(".button-height");
+		let $platform = $(this).find(".platform");
+		let $platformWall = $(this).find(".platform-wall");
 
-	// Set buttonHeight to be 2/3 the size of the button
-	$buttonHeight.height(2 * $buttons.outerHeight() / 3);
-	$buttonHeight.width($buttons.outerWidth());
+		$(this).height($button.outerHeight());
+		$(this).width($button.outerWidth());
 
-	$platforms.height($buttons.outerHeight() + $platforms.height());
-	$platforms.width($buttons.outerWidth() + $platforms.width());
+		// Set buttonHeight to be 2/3 the size of the button
+		$buttonHeight.height(2 * $button.outerHeight() / 3);
+		$buttonHeight.width($button.outerWidth());
 
-	// Set the platformWalls to be 1/3 the size of the button
-	$platformWalls.height($buttons.outerHeight() / 3);
-	$platformWalls.width($buttons.outerWidth());
+		$platform.height($button.outerHeight() + $platform.height());
+		$platform.width($button.outerWidth() + $platform.width());
 
-	$buttons.on("mousedown", function() {
-		c("Button Clicked!");
+		// Set the platformWalls to be 1/3 the size of the button
+		$platformWall.height($button.outerHeight() / 3);
+		$platformWall.width($button.outerWidth());
+
+		$button.on("mousedown", function() {
+			c("Button Clicked!");
+		});
 	});
+
+	// $buttonContainers.height($buttons.outerHeight());
+	// $buttonContainers.width($buttons.outerWidth());
+
+	// // Set buttonHeight to be 2/3 the size of the button
+	// $buttonHeight.height(2 * $buttons.outerHeight() / 3);
+	// $buttonHeight.width($buttons.outerWidth());
+
+	// $platforms.height($buttons.outerHeight() + $platforms.height());
+	// $platforms.width($buttons.outerWidth() + $platforms.width());
+
+	// // Set the platformWalls to be 1/3 the size of the button
+	// $platformWalls.height($buttons.outerHeight() / 3);
+	// $platformWalls.width($buttons.outerWidth());
+
+	// $buttons.on("mousedown", function() {
+	// 	c("Button Clicked!");
+	// });
 }
 
 // function to do console.log() (I didn't want to keep writing it out)
