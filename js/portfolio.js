@@ -6,9 +6,6 @@ $(function() {
 	$body.addClass("smooth-load-transition");
 	
 	findAndCreateButtons();
-
-	setButtonWidthAndHeight();
-
 });
 
 // Allows shorthand HTML to be written for buttons.  Contains code that
@@ -20,28 +17,50 @@ function findAndCreateButtons() {
 
 	// Foreach button container, assign the button variant and write the inner html.
 	$buttonContainers.each(function() {
+		// Determine which variant to create
 		if ($(this).attr("data-variant-success") != undefined) variant = " btn-main--success ";
 		else if ($(this).attr("data-variant-danger") != undefined) variant = " btn-main--danger ";
 
 		// If the URL is empty, don't bother putting in href=""
+		// Replace all spaces in the text with &nbsp; to fix a bug where each word starts on a new line.
 		url = $(this).attr("data-href") != "" ? "href='" + $(this).attr("data-href") + "'" : ""; 
+		let text = $(this).attr("data-text").replace(/ /g, "&nbsp;")
 
 		$(this).html(
 			  "<a class='btn btn-main" + variant + url
-			+ "' target='_blank'>" + $(this).attr("data-text") + "</a>"
+			+ "' target='_blank'>" + text + "</a>"
 			+ "<div class='button-height'></div>"
 			+ "<div class='platform'></div>"
 			+ "<div class='platform-wall'></div>");
 
+		// These next lines set the width and height of the components of the button.
+
 		let $button = $(this).find(".btn.btn-main");
+		let $buttonHeight = $(this).find(".button-height");
+		let $platform = $(this).find(".platform");
+		let $platformWall = $(this).find(".platform-wall");
 
-		console.log("Text: " + $(this).attr("data-text"));
-		console.log("Height: " + $button.height());
+		$(this).height($button.outerHeight());
+		$(this).width($button.outerWidth());
 
+		// Set buttonHeight to be 2/3 the size of the button
+		$buttonHeight.height(2 * $button.outerHeight() / 3);
+		$buttonHeight.width($button.outerWidth());
+
+		$platform.height($button.outerHeight() + $platform.height());
+		$platform.width($button.outerWidth() + $platform.width());
+
+		// Set the platformWalls to be 1/3 the size of the button
+		$platformWall.height($button.outerHeight() / 3);
+		$platformWall.width($button.outerWidth());
+
+		$button.on("mousedown", function() {
+			c("Button Clicked!");
+		});
 	});
 }
 
-// Set the width and height of the components of the button.
+
 function setButtonWidthAndHeight() {
 	let $buttonContainers = $(".btn-main--container");
 	// var $buttons = $(".btn-main--container > .btn.btn-main");

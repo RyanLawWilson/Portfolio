@@ -147,9 +147,11 @@ h1.section-title {
 
 /* Buttons will not display properly unless they are surrounded by this container */
 
-/* This button is made to look 3D and uses a :before pseudo element for styling purposes. */
+/* This button is made to look 3D and uses a position relative div and relative divs to accomplish this */
 
 /* MUST be used in conjunction with Bootstrap's 'btn' class */
+
+/* Buttons CANNOT have multiple rows of text */
 
 /* Used this website as a resource: https://tympanus.net/codrops/2012/01/11/css-buttons-with-pseudo-elements/ */
 
