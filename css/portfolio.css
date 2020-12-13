@@ -162,7 +162,7 @@ button-height refers to the area below the button which represents the 3d protru
 .btn-main--container {
     position: relative;
     display: inline-block;
-    margin: 0px 3px 0px 3px;
+    margin: 5px 3px 0px 3px;
 }
 
 .btn-main--container > .btn.btn-main {
@@ -194,7 +194,7 @@ button-height refers to the area below the button which represents the 3d protru
 .btn-main--container > .btn.btn-main:active {
     top: 5px;
     height: 86%;
-    color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.3);
 }
 
 .btn-main--container > .platform {
