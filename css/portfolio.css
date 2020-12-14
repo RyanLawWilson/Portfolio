@@ -211,7 +211,7 @@ button-height refers to the area below the button which represents the 3d protru
 .btn-main--container > .platform-wall {
     position: absolute;
     background-color: rgb(40, 40, 40);
-    background: linear-gradient(150deg, rgb(60, 60, 60), rgb(40, 40, 40));
+    background: linear-gradient(150deg, rgb(40, 40, 40), rgb(20, 20, 20));
     z-index: -1;
     border-top-right-radius: 0.33em;
     border-top-left-radius: 0.33em;
