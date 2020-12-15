@@ -20,12 +20,13 @@ function findAndCreateButtons() {
 
 		// If the URL is empty, don't bother putting in href=""
 		// Replace all spaces in the text with &nbsp; to fix a bug where each word starts on a new line.
-		// If the data-text attribute was left out, set text to a default value
+		// If the data-text attribute was left out, set text to a default value		
+
 		let url = $(this).attr("data-href") != "" && $(this).attr("data-href") != undefined ? "href='" + $(this).attr("data-href") + "'" : ""; 
 		let text = $(this).attr("data-text") != undefined ? $(this).attr("data-text").replace(/ /g, "&nbsp;") : "Button";
 
 		// Add the components that make up the button to the button container
-		let $button = $("<a class='btn btn-main" + variant + url + "' target='_blank'>" + text + "</a>").appendTo($(this));
+		let $button = $("<a class='btn btn-main" + variant + "' " + url + " target='_blank'>" + text + "</a>").appendTo($(this));
 		let $buttonHeight = $("<div class='button-height'></div>").appendTo($(this));
 		let $platform = $("<div class='platform'></div>").appendTo($(this));
 		let $platformWall = $("<div class='platform-wall'></div>").appendTo($(this));
