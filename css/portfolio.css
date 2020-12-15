@@ -306,3 +306,25 @@ button-height refers to the area below the button which represents the 3d protru
 .btn-main--container > .btn.btn-main.btn-main--success ~ .button-height {
     background: linear-gradient(150deg, #1e7732, #10521e);
 }
+
+/*******************************
+=== Responsive Card Columns ===
+*******************************/
+
+@media (min-width: 576px) {
+    .my-projects-section .card-columns {
+        column-count: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    .my-projects-section .card-columns {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 1400px) {
+    .my-projects-section .card-columns {
+        column-count: 3;
+    }
+}
