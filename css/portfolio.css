@@ -69,17 +69,43 @@ body.smooth-load-transition {
     font-size: 4em;
 }
 
-h1.section-title {
+h1.section-title, .subsection-title {
     font-weight: bold;
-    
 }
 
 h1.section-title {
-    font-weight: bold;
     letter-spacing: 3px;
     text-align: center;
     font-size: 5em;
-    
+}
+
+.subsection-title--container {
+    width: 800px;
+}
+
+.subsection-title:hover {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.subsection-title::before {
+    content: "";
+    position: absolute;
+    background-color: white;
+    width: 50%;
+    height: 5px;
+    left: -55%;
+    top: 45%;
+}
+
+.subsection-title::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    width: 50%;
+    height: 5px;
+    right: -55%;
+    bottom: 55%;
 }
 
 @media (max-width: 767px) {
@@ -95,6 +121,14 @@ h1.section-title {
         font-size: 4em;
         letter-spacing: 2px;
     }
+    
+    .subsection-title::before, .subsection-title::after {
+        display: none;
+    }
+
+    .subsection-title {
+        text-decoration: underline;
+    }
 }
 
 @media (max-width: 500px) {
@@ -108,13 +142,14 @@ h1.section-title {
     }
 }
 
-.content-section {
-    background-color: rgb(40, 39, 38);
-    border-radius: 0.5em;
-    padding: 0.5em 0.75em;
-    margin: 15px 0 10px 0;
-    box-shadow: 3px 5px 5px var(--box-shadow--color);
+.my-projects-section {
+    margin: 15px 20px 10px 20px;
 }
+
+.my-projects-section p  {
+    font-size: 1.5em;
+}
+
 
 /********************
 === Image Styles ===
@@ -123,7 +158,6 @@ h1.section-title {
 .img-portfolio {
     box-shadow: 3px 5px 5px var(--box-shadow--color);
     margin: 20px;
-    
 }
 
 .img-portfolio--profile {
@@ -137,6 +171,19 @@ h1.section-title {
     .img-portfolio--profile {
         width: 75%;
     }
+}
+
+.img-section {
+    background-color: rgb(40, 39, 38);
+    border-radius: 0.5em;
+    padding: 0.5em 0.75em;
+    box-shadow: 6px 8px 5px var(--box-shadow--color);
+}
+
+.img-content {
+    position: relative;
+    width: 100%;
+    border-radius: 0.5em;
 }
 
 /*********************
@@ -170,11 +217,15 @@ button-height refers to the area below the button which represents the 3d protru
     background-color: rgb(64, 88, 194);
     color: rgba(255, 255, 255, 1);
     font-weight: bold;
-    border-radius: 0.33em;
+    border-radius: 5px;
     top: -6px;
     left: 0;
     border: none;
     transition: top 0.07s, color 1s;
+}
+
+.subsection-title > .btn.btn-main {
+    font-size: 32px;
 }
 
 /* Turns off box-shadow when the button is clicked and Removes the blue outline that appears when focusing a button */
@@ -187,13 +238,13 @@ button-height refers to the area below the button which represents the 3d protru
 .btn-main--container > .btn.btn-main:hover {
     top: -4px;
     height: 100%;
-    transition: top 0.125s, height 0.15s, color 0.25s, transform 0.05s;
+    transition: top 0.125s, height 0.10s, color 0.25s, transform 0.05s;
     color: rgba(255, 255, 255, 0.7);
 }
 
 .btn-main--container > .btn.btn-main:active {
-    top: 5px;
     height: 86%;
+    top: 14%;
     color: rgba(255, 255, 255, 0.3);
 }
 
@@ -205,7 +256,7 @@ button-height refers to the area below the button which represents the 3d protru
     height: 4px;
     top: -2px;
     left: -2px;
-    border-radius: 0.33em;
+    border-radius: 5px;
 }
 
 .btn-main--container > .platform-wall {
@@ -213,8 +264,8 @@ button-height refers to the area below the button which represents the 3d protru
     background-color: rgb(40, 40, 40);
     background: linear-gradient(150deg, rgb(40, 40, 40), rgb(20, 20, 20));
     z-index: -1;
-    border-top-right-radius: 0.33em;
-    border-top-left-radius: 0.33em;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
 }
 
 .btn-main--container > .button-height {
@@ -224,8 +275,8 @@ button-height refers to the area below the button which represents the 3d protru
     left: 0px;
     background-color: rgb(39, 55, 131);
     background: linear-gradient(150deg, rgb(60, 80, 170), rgb(45, 62, 141));
-    border-bottom-right-radius: 0.33em;
-    border-bottom-left-radius: 0.33em;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 /*************************
