@@ -1,3 +1,4 @@
+console.log("test");
 function Minotaur() {
 	// Random numbers that are added to stats to make each entity more unique.
 	let statVariance1 = Math.floor((Math.random() - 0.5) * 6);
@@ -58,7 +59,7 @@ function Statistics(atkDam, magDam, atkDef, magDef, atkSpd, movSpd, hp) {
 
 // Info about the entity (name, )
 function Profile(entityName) {
-	this.name = entityName;
+	this.entityName = entityName;
 }
 
 // Numbers that are below 1 reduce the entity's stat value.  A multiplier of 1 doesn't change the stat.
@@ -76,5 +77,14 @@ function AttackMove(atkName, lag, castTime, projSpd, atkDamMul, magDamMul, atkDe
 }
 
 const m = new Minotaur();
-console.log(`${m.profile.name}: ${m.stats.attackDamage}`);
+console.log(`${m.profile.entityName}: ${m.stats.attackDamage}`);
 
+$(function() {
+    var canvas = document.getElementById("game-canvas");
+
+    console.log(canvas);
+
+    var context = canvas.getContext("2d");
+    context.fillStyle = "#FF00AA";
+    context.fillRect(0, 0, 10, 10);
+});
