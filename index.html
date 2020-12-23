@@ -13,9 +13,12 @@
 
 <body>
     <div class="site-content">
-        <img id="player" style="opacity: 0" src="./images/js_game/player.png">
-        <img id="enemy" style="opacity: 0" src="./images/js_game/player.png">
+        <img id="player" style="opacity: 0" class="position-fixed" src="./images/js_game/player.png">
+        <img id="enemy" style="opacity: 0" class="position-fixed" src="./images/js_game/player.png">
         <canvas id="game-canvas"></canvas>
+        <div class="game-ui">
+            
+        </div>
 
         <div class="background-container"></div>
 
@@ -29,7 +32,7 @@
                 <!-- Here is a compact way of displaying a button (See JavaScript) -->
                 <div class="btn-main--container" data-text="My Projects" data-variant-success data-href="#projects"></div>
 
-                <div class="btn-main--container" data-text="About me" data-variant-danger></div>
+                <div class="btn-main--container" data-text="JS Game" data-variant-danger></div>
 
                 <div class="btn-main--container" data-text="Contact Me"></div>
                 

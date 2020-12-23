@@ -1,8 +1,10 @@
-console.log("test");
+console.log("js_game loaded");
+
 
 /*****************************
  * === Class Definitions === *
  *****************************/
+
 
  // An enemy type that can charge.
 function Minotaur() {
@@ -83,16 +85,51 @@ function AttackMove(atkName, lag, castTime, projSpd, atkDamMul, magDamMul, atkDe
 	this.movementSpeedMultiplier = movSpdMul;
 }
 
+
+/*********************
+ * === Game Area === *
+ ********************/
+
+
 $(function () {
-	// Ensure that the width and height of the canvas take up the entire screen
+	// Find canvas and declare 2d context
 	var canvas = document.getElementById("game-canvas");
+	var context = canvas.getContext("2d");
+
+	// Ensure that the width and height of the canvas take up the entire screen
 	canvas.width = `${window.innerWidth}`;
 	canvas.height = `${window.innerHeight}`;
 
-	var context = canvas.getContext("2d");
+	$(".btn-main--container[data-text='JS Game'] > .btn.btn-main").on("click", () => {
+		startGame();
+	});
+
+	// Draw the player on the screen (the player is represented by an image)
 	var player = document.getElementById("player");
 	context.drawImage(player, 10, 10);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	function startGame() {
+		canvas.style.display = "block";
+		console.log("asdfasdf");
+	}
 
 	// Resize support.  Every time the screen is resized, the canvas is drawn again
 	// which removes all of the drawings.
