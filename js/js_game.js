@@ -80,11 +80,24 @@ const m = new Minotaur();
 console.log(`${m.profile.entityName}: ${m.stats.attackDamage}`);
 
 $(function() {
-    var canvas = document.getElementById("game-canvas");
-
-    console.log(canvas);
+	var canvas = document.getElementById("game-canvas");
+	canvas.width = `${window.innerWidth}`;
+	canvas.height = `${window.innerHeight}`;
 
     var context = canvas.getContext("2d");
-    context.fillStyle = "#FF00AA";
-    context.fillRect(0, 0, 10, 10);
+	var player = document.getElementById("player");
+	context.drawImage(player, 10, 10);
+
+
+	// Resize support.  Every time the screen is resized, the canvas is drawn again
+	// which removes all of the drawings.
+	$(window).resize(() => {
+		console.log("Resized");
+		canvas.width = `${window.innerWidth}`;
+		canvas.height = `${window.innerHeight}`;
+		context.drawImage(player, 10, 10);
+	});
 });
+
+
+
