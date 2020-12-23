@@ -1,4 +1,10 @@
 console.log("test");
+
+/*****************************
+ * === Class Definitions === *
+ *****************************/
+
+ // An enemy type that can charge.
 function Minotaur() {
 	// Random numbers that are added to stats to make each entity more unique.
 	let statVariance1 = Math.floor((Math.random() - 0.5) * 6);
@@ -46,7 +52,7 @@ function Minotaur() {
 	];
 }
 
-// Entities have stats
+// All entities, players and enemys, will have stats
 function Statistics(atkDam, magDam, atkDef, magDef, atkSpd, movSpd, hp) {
 	this.attackDamage = atkDam;
 	this.magicDamage = magDam;
@@ -57,11 +63,12 @@ function Statistics(atkDam, magDam, atkDef, magDef, atkSpd, movSpd, hp) {
 	this.health = hp;
 }
 
-// Info about the entity (name, )
+// Info about the entity...
 function Profile(entityName) {
 	this.entityName = entityName;
 }
 
+// Represents an attack that an enemy or player can make.
 // Numbers that are below 1 reduce the entity's stat value.  A multiplier of 1 doesn't change the stat.
 function AttackMove(atkName, lag, castTime, projSpd, atkDamMul, magDamMul, atkDefMul, magDefMul, atkSpdMul, movSpdMul) {
 	this.attackName = atkName; // The name of the attack
@@ -76,15 +83,13 @@ function AttackMove(atkName, lag, castTime, projSpd, atkDamMul, magDamMul, atkDe
 	this.movementSpeedMultiplier = movSpdMul;
 }
 
-const m = new Minotaur();
-console.log(`${m.profile.entityName}: ${m.stats.attackDamage}`);
-
-$(function() {
+$(function () {
+	// Ensure that the width and height of the canvas take up the entire screen
 	var canvas = document.getElementById("game-canvas");
 	canvas.width = `${window.innerWidth}`;
 	canvas.height = `${window.innerHeight}`;
 
-    var context = canvas.getContext("2d");
+	var context = canvas.getContext("2d");
 	var player = document.getElementById("player");
 	context.drawImage(player, 10, 10);
 
