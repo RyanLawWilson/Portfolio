@@ -1,9 +1,9 @@
-<h1>
+<h1 align="center">
     Ryan Wilson
 </h1>
 
-<h3>
-ryan.law.wilson@gmail.com &#9670; (801) 574-4108 <br>
+<h3 align="center">
+    ryan.law.wilson@gmail.com &#9670; (801) 574-4108 <br>
     <a href="https://github.com/RyanLawWilson">GitHub</a> &#9670;
     <a href="https://ryanlawwilson.github.io/Portfolio/">Portfolio</a> &#9670;
     <a href="https://www.linkedin.com/in/ryan-wilson-879263104/">LinkedIn</a>
@@ -26,14 +26,6 @@ Product Owner of a Software Development Scrum team working on a C# .NET Framewor
 *March 2020*<br>
 Full Stack Software Developer on a Django project and a C# .NET Framework project.  Completed backlog items and participated in Scrum team meetings.
 
-### ***Amazon*** - Inbound Dock Decanter
-*August 2019 - December 2019*<br>
-Responsible for quickly opening boxes and ensuring product quality so that the inventory process can proceed in a fast, orderly and efficient manner.
-
-### ***UPS*** - Package Handler
-*June 2019 - August 2019*<br>
-Responsibilities include, knowledge / practice of safety guidelines and loading packages into vehicles in a safe, efficient, and fast manner while reading destination labels to avoid mis-loads.
-
 ### ***Salt Lake Community College*** - Tutor Certified II
 *October 2015 - May 2019*<br>
 The STEM Learning Resources department works with STEM departments to build self-confidence, promote critical thinking skills, and encourage active learning for students.  Responsibilities included deep knowledge of Mathematics, effective and sincere communication with students and the ability to demonstrate the same concept in several different ways to those students.
@@ -51,6 +43,12 @@ The STEM Learning Resources department works with STEM departments to build self
 
 ### ***[Amiibo Collector](https://github.com/RyanLawWilson/AmiiboCollector)***
 A Web App using Django that allows users to store and search for Amiibos. Also has a feature that shows the most recent Nintendo news. In this project, I utilize an API and data scraping.
+
+### ***[Space Traders](https://github.com/RyanLawWilson/space-traders)***
+A user interface (UI) built in React for an API-based online game called [Space Traders](https://api.spacetraders.io/).  The UI I built allows users to log in to their Space Traders account, accept loans, buy space ships, make flight plans, and trade resources.
+
+### ***[File System](https://github.com/RyanLawWilson/FileSystem)***
+A custom file system built with C#.  This program simulates a real file system where you can add, rename, and delete files and folders, change directories.
 
 ### ***[Car Insurance](https://github.com/RyanLawWilson/CarInsurance)***
 This .NET Framework application calculates the insurance premium of a User based on the values that they input.  Bootstrap is used to enhance the look of the site.
