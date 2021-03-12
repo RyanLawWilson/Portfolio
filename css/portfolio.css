@@ -125,24 +125,22 @@ h1.section-title {
     color: #007bff;
 }
 
-.subsection-title::before {
+
+.subsection-title::before, .subsection-title::after {
     content: "";
     position: absolute;
     background-color: white;
     width: 50%;
     height: 5px;
-    left: -55%;
     top: 45%;
 }
 
+.subsection-title::before {
+    left: -55%;
+}
+
 .subsection-title::after {
-    content: "";
-    position: absolute;
-    background-color: white;
-    width: 50%;
-    height: 5px;
     right: -55%;
-    bottom: 55%;
 }
 
 @media (max-width: 767px) {
