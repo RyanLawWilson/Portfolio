@@ -23,7 +23,7 @@ function findAndCreateButtons() {
 		// Replace all spaces in the text with &nbsp; to fix a bug where each word starts on a new line.
 		// If the data-text attribute was left out, set text to a default value
 
-		let target = $(this).attr("data-href") != undefined ?? $(this).attr("data-href")[0] == '#' ? "" : "target='_blank'";
+		let target = ($(this).attr("data-href") != undefined && $(this).attr("data-href")[0] == '#') ? "" : "target='_blank'";
 		let url = $(this).attr("data-href") != "" && $(this).attr("data-href") != undefined ? "href='" + $(this).attr("data-href") + "'" : "";
 		let text = $(this).attr("data-text") != undefined ? $(this).attr("data-text").replace(/ /g, "&nbsp;") : "Button";
 
