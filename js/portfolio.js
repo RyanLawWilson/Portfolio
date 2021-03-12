@@ -6,6 +6,11 @@ $(function () {
 	$body.addClass("smooth-load-transition");
 
 	findAndCreateButtons();
+
+	// Start the carousel
+	$('#amiibo-indicators.carousel').carousel()
+
+	console.log("=== All JS Complete ===");
 });
 
 // Allows shorthand HTML to be written for buttons.  Contains code that
