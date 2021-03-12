@@ -104,6 +104,18 @@ h1.section-title {
     font-size: 5em;
 }
 
+/* A hidden div for snapping the user to the correct location on the page */
+.section-title--snap {
+    display: block;
+    width: 200px;
+    height: 10px;
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+}
+
 .subsection-title--container {
     width: 800px;
 }
