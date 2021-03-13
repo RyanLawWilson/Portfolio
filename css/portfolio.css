@@ -11,6 +11,7 @@ body {
     display: none;
     opacity: 0;
     transition: opacity 0.25s;
+    overflow-x: hidden;
 }
 
 body.smooth-load-transition {
@@ -79,6 +80,40 @@ body.smooth-load-transition {
 .navigation h1 {
     margin-bottom: 0;
     font-weight: bolder;
+}
+
+/**********************
+=== Amiibo Carousel ===
+**********************/
+
+.amiibo-carousel--container {
+    margin: 0 -20px 0 -20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+.amiibo-control--prev, .amiibo-control--next {
+    width: 50px;
+    background-color: transparent;
+    transition: 0.15s;
+}
+
+.amiibo-control--prev:hover, .amiibo-control--next:hover {
+    background-color: rgba(50, 50, 50, 0.5);
+}
+
+.amiibo-control--prev {
+    left: -50px;
+}
+
+.amiibo-control--next {
+    right: -50px;
+}
+
+@media (max-width: 991px) {
+    .amiibo-carousel--container {
+        padding: 0;
+    }
 }
 
 /************************
