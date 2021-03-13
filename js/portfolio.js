@@ -8,7 +8,9 @@ $(function () {
 	findAndCreateButtons();
 
 	// Start the carousel
-	$('#amiibo-indicators.carousel').carousel()
+	$('#amiibo-indicators.carousel').carousel({
+		interval: 30000
+	});
 
 	console.log("=== All JS Complete ===");
 });
