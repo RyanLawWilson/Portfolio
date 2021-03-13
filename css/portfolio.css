@@ -139,6 +139,19 @@ body.smooth-load-transition {
     width: 100%;
 }
 
+.gifffer-play-button {
+    transition: 0.5s;
+}
+
+.carousel-item.active:hover .gifffer-play-button {
+    transform: scale(1.25);
+}
+
+.carousel-item canvas:focus, .carousel-item img:focus, .carousel-item *:focus {
+    display: block;
+    outline: none;
+}
+
 @media (max-width: 991px) {
     .amiibo-carousel--container {
         padding: 0;
