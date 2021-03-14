@@ -132,11 +132,12 @@ body.smooth-load-transition {
 
 .amiibo-heading {
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-end;
 }
 
 .amiibo-heading-gif {
     width: 100%;
+    margin-bottom: 1em;
 }
 
 .gifffer-play-button {
