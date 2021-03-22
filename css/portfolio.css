@@ -5,6 +5,10 @@
     --box-shadow--color: rgb(20, 20, 20);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--bg-color--main);
     color: var(--text-color--main);
@@ -87,7 +91,7 @@ body.smooth-load-transition {
 **********************/
 
 .amiibo-carousel {
-    margin-bottom: 65px;
+    margin-bottom: 40px;
 }
 
 .amiibo-carousel--container {
@@ -221,6 +225,16 @@ h1.section-title {
     right: -55%;
 }
 
+.my-projects-section {
+    margin: 15px 20px 10px 20px;
+}
+
+.my-projects-section p  {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
 @media (max-width: 767px) {
     .profile-section .welcome-text {
         font-size: 5em;
@@ -242,6 +256,10 @@ h1.section-title {
     .subsection-title {
         text-decoration: underline;
     }
+
+    .my-projects-section p  {
+        font-size: 1.25em;
+    }
 }
 
 @media (max-width: 500px) {
@@ -253,15 +271,10 @@ h1.section-title {
         font-size: 3em;
         letter-spacing: 1px;
     }
-}
 
-.my-projects-section {
-    margin: 15px 20px 10px 20px;
-}
-
-.my-projects-section p  {
-    font-size: 1.5em;
-    font-weight: bold;
+    .my-projects-section p  {
+        font-size: 1.00em;
+    }
 }
 
 
