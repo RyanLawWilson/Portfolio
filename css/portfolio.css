@@ -157,12 +157,6 @@ body.smooth-load-transition {
     outline: none;
 }
 
-@media (max-width: 991px) {
-    .amiibo-carousel--container {
-        padding: 0;
-    }
-}
-
 /************************
 === Content Sections ===
 ************************/
@@ -183,7 +177,7 @@ h1.section-title, .subsection-title {
 h1.section-title {
     letter-spacing: 3px;
     text-align: center;
-    font-size: 5em;
+    font-size: 7em;
 }
 
 /* A hidden div for snapping the user to the correct location on the page */
@@ -233,6 +227,16 @@ h1.section-title {
     font-size: 1.5em;
     font-weight: bold;
     margin: 10px 0;
+}
+
+@media (max-width: 991px) {
+    .amiibo-carousel--container {
+        padding: 0;
+    }
+
+    h1.section-title {
+        font-size: 5em;
+    }
 }
 
 @media (max-width: 767px) {

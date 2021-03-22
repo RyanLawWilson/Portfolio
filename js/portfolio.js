@@ -12,6 +12,17 @@ $(function () {
 		interval: 30000
 	});
 
+
+	
+
+
+
+
+
+
+
+
+
 	// https://github.com/krasimir/gifffer
 	// Gifffer({
 	// 	playButtonStyles: {
