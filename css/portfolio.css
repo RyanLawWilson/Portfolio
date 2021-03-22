@@ -139,11 +139,6 @@ body.smooth-load-transition {
     align-items: flex-end;
 }
 
-.amiibo-heading-gif {
-    width: 100%;
-    margin-bottom: 1em;
-}
-
 .gifffer-play-button {
     transition: 0.5s;
 }
@@ -178,6 +173,8 @@ h1.section-title {
     letter-spacing: 3px;
     text-align: center;
     font-size: 7em;
+    display: inline-block;
+    margin: auto;
 }
 
 /* A hidden div for snapping the user to the correct location on the page */
@@ -229,6 +226,33 @@ h1.section-title {
     margin: 10px 0;
 }
 
+.jigglypuff-gif, .spaceship-gif {
+    width: 150px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.jigglypuff-gif {
+    right: -160px;
+}
+
+.spaceship-gif {
+    left: -140px;
+    transform: rotate(-20deg) translateY(-50%);
+    animation: spaceship infinite 2000ms alternate ease-in-out;
+}
+
+@keyframes spaceship {
+    0% {
+        transform: rotate(-20deg) translateY(-50%);
+    }
+    100% {
+        transform: rotate(-20deg) translateY(calc(-50% + 20px));
+    }
+}
+
 @media (max-width: 991px) {
     .amiibo-carousel--container {
         padding: 0;
@@ -236,6 +260,18 @@ h1.section-title {
 
     h1.section-title {
         font-size: 5em;
+    }
+
+    .jigglypuff-gif, .spaceship-gif { 
+        width: 100px;
+    }
+
+    .jigglypuff-gif {
+        right: -110px;
+    }
+
+    .spaceship-gif {
+        left: -90px;
     }
 }
 
@@ -264,6 +300,22 @@ h1.section-title {
     .my-projects-section p  {
         font-size: 1.25em;
     }
+
+    .jigglypuff-gif, .spaceship-gif { 
+        width: 100px;
+    }
+
+    .jigglypuff-gif {
+        top: -89%;
+        transform: none;
+        right: -38px;
+    }
+
+    .spaceship-gif {
+        left: -17px;
+        top: -36%;
+        transform: none;
+    }
 }
 
 @media (max-width: 500px) {
@@ -274,10 +326,27 @@ h1.section-title {
     h1.section-title {
         font-size: 3em;
         letter-spacing: 1px;
+        white-space: nowrap;
     }
 
     .my-projects-section p  {
         font-size: 1.00em;
+    }
+
+    .jigglypuff-gif, .spaceship-gif { 
+        width: 75px;
+    }
+
+    .jigglypuff-gif {
+        top: -89%;
+        transform: none;
+        right: -38px;
+    }
+
+    .spaceship-gif {
+        left: -17px;
+        top: -36%;
+        transform: none;
     }
 }
 
