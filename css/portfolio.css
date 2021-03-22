@@ -178,7 +178,7 @@ h1.section-title {
 }
 
 /* A hidden div for snapping the user to the correct location on the page */
-.section-title--snap {
+.snap-to-element, .snap-to-element-2, .snap-to-element-3 {
     display: block;
     width: 200px;
     height: 10px;
@@ -187,6 +187,14 @@ h1.section-title {
     left: 50%;
     transform: translateX(-50%);
     background-color: transparent;
+}
+
+.snap-to-element-2 {
+    top: -75px;
+}
+
+.snap-to-element-3 {
+    top: -100px;
 }
 
 .subsection-title--container {
