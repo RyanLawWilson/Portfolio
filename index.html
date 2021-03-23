@@ -50,18 +50,18 @@
                 title="Ryan Wilson">
             <div class="d-md-flex flex-column justify-content-center">
                 <h1 class="welcome-text mb-0 mb-md-3 mb-lg-4 mb-xl-5 d-none d-md-block">Welcome!</h1>
-                <h3 class="text-left px-2">
+                <p class="welcome-subtext text-left px-2">
                     My name is Ryan Wilson and I am a Software Developer with experience in many technologies.
                     Currently, I'm a Product Owner for a C# .Net Framework project.
                     Take a look below to see some of my recent projects.
-                </h3>
+                </p>
             </div>
         </div>
 
         
 
         <div class="my-projects-section">
-            <div class="my-projects--heading">
+            <div class="my-projects--heading pb-md-3">
                 <h1 class="section-title position-relative">
                     My Projects
                     <div class="snap-to-element" id="projects"></div>
@@ -70,7 +70,7 @@
                 </h1>
             </div>
 
-            <div class="text-center mx-auto pt-3 position-relative">
+            <div class="text-center mx-auto pt-5 pt-md-3 position-relative">
                 <div class="snap-to-element-2" id="amiibo-app-button"></div>
                 <div id="amiibo-app-button" class="subsection-title btn-main--container" data-text="Amiibo App"
                     data-href="https://github.com/RyanLawWilson/AmiiboCollector" data-variant-danger></div>
@@ -149,7 +149,7 @@
 
                 <div class="col-12 col-lg-10 col-xl-8 mx-auto amiibo-text--container">
                     <div data-page="API" style="opacity: 1; display: block">
-                        <h3 class="text-center py-2 mb-0">API Page</h3>
+                        <h2 class="text-center py-2 mb-0">API Page</h2>
                         <p>
                             I use Python's requests module to contact the API and get data about Amiibos.
                             An API that I used to complement my App was the AmiiboAPI. This API has nearly
@@ -157,7 +157,7 @@
                         </p>
                     </div>
                     <div data-page="BS_Scrape">
-                        <h3 class="text-center py-2 mb-0">Nintendo News page (Beautiful Soup)</h3>
+                        <h2 class="text-center py-2 mb-0">Nintendo News page (Beautiful Soup)</h2>
                         <p>
                             The website that I am scraping from is 
                             <a href="https://nintendonews.com/" target="_blank">nintendonews.com</a>. I am using the 
@@ -169,7 +169,7 @@
                         </p>
                     </div>
                     <div data-page="Index">
-                        <h3 class="text-center py-2 mb-0">Index Page</h3>
+                        <h2 class="text-center py-2 mb-0">Index Page</h2>
                         <p>
                             The Index page displays all of the Amiibos stored in the database. 
                             The Amiibo information is organized in a table. From the table you 
@@ -177,7 +177,7 @@
                         </p>
                     </div>
                     <div data-page="Create">
-                        <h3 class="text-center py-2 mb-0">Create Page</h3>
+                        <h2 class="text-center py-2 mb-0">Create Page</h2>
                         <p>
                             the user enters in the Amiibo name, game series, purchase date, purchase amount, and the 
                             quantity. After the form is submitted, the amiibo_db method is called which saves 
@@ -185,7 +185,7 @@
                         </p>
                     </div>
                     <div data-page="Details">
-                        <h3 class="text-center py-2 mb-0">Details Page</h3>
+                        <h2 class="text-center py-2 mb-0">Details Page</h2>
                         <p>
                             Clicking on the details button on the Index page will bring you to this page. 
                             Here, you can see the image associated with your Amiibo 
@@ -194,7 +194,7 @@
                         </p>
                     </div>
                     <div data-page="Edit">
-                        <h3 class="text-center py-2 mb-0">Edit Page</h3>
+                        <h2 class="text-center py-2 mb-0">Edit Page</h2>
                         <p>
                             To Edit an Amiibo, click the 'Edit Amiibo' button on the details page. The edit page displays a 
                             form populated with that particular Amiibo's information. Editing some of the values in the fields 
@@ -202,7 +202,7 @@
                         </p>
                     </div>
                     <div data-page="Delete">
-                        <h3 class="text-center py-2 mb-0">Delete Page</h3>
+                        <h2 class="text-center py-2 mb-0">Delete Page</h2>
                         <p>
                             Instead of a separate made for the delete feature, I created a modal. 
                             On the details page of any Amiibo, clicking the 'Delete Amiibo' button 
