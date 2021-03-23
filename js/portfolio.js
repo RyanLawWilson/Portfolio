@@ -73,11 +73,8 @@ function activateBootstrapCarousels() {
 		interval: 20000
 	});
 
-	// All carousels
-	let $allCarousels = $(".portfolio-carousel");
-
 	// Detect when any one of the portfolio carousel slides.
-	$allCarousels.bind("slide.bs.carousel", (e) => {
+	$(".portfolio-carousel").bind("slide.bs.carousel", (e) => {
 		// Need to wait for the Bootstrap to add the carousel-item-next class to the carousel item.
 		setTimeout(() => {
 			let prevOrNext = e.target.getElementsByClassName("carousel-item-next")[0] ?? e.target.getElementsByClassName("carousel-item-prev")[0];
