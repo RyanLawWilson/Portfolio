@@ -8,6 +8,26 @@
     text-decoration: underline !important;
 }
 
+.my-6 {
+    margin-top: 6rem !important;
+    margin-bottom: 6rem !important;
+}
+
+.my-7 {
+    margin-top: 8rem !important;
+    margin-bottom: 8rem !important;
+}
+
+.my-8 {
+    margin-top: 10rem !important;
+    margin-bottom: 10rem !important;
+}
+
+.my-9 {
+    margin-top: 15rem !important;
+    margin-bottom: 15rem !important;
+}
+
 /* Options for 2XL sizes */
 @media (min-width: 1600px)
 {
@@ -24,6 +44,11 @@
     .mx-xxl-60 {
         margin-left: 20% !important; 
         margin-right: 20% !important;
+    }
+
+    .my-xxl-6 {
+        margin-top: 6rem !important;
+        margin-bottom: 6rem !important;
     }
 }
 
@@ -43,5 +68,10 @@
     .mx-hd-60 {
         margin-left: 20% !important; 
         margin-right: 20% !important;
+    }
+
+    .my-hd-7 {
+        margin-top: 8rem !important;
+        margin-bottom: 8rem !important;
     }
 }
