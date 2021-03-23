@@ -90,14 +90,17 @@ body.smooth-load-transition {
 === Amiibo Carousel ===
 **********************/
 
+.my-projects--heading {
+    padding: 1rem 0 3rem 0;
+    text-align: center;
+}
+
 .amiibo-carousel {
     margin-bottom: 40px;
 }
 
 .amiibo-carousel--container {
-    margin: 0 -20px 0 -20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
+    padding: 0 0 20px 0;
 }
 
 .amiibo-control--prev, .amiibo-control--next {
@@ -238,12 +241,11 @@ h1.section-title {
 }
 
 .my-projects-section {
-    margin: 15px 20px 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .my-projects-section p  {
     font-size: 1.5em;
-    font-weight: bold;
     margin: 10px 0;
 }
 
