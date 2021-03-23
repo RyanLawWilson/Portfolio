@@ -7,24 +7,33 @@ $(function () {
 
 	findAndCreateButtons();
 
-	// Start the carousel
-	let $amiiboCarousel = $('#amiibo-indicators.carousel');
-	$amiiboCarousel.carousel({
+	// Start amiibo carousel
+	$('#amiibo-indicators.carousel').carousel({
 		interval: 30000
 	});
 
-	// Detect when the amiibo carousel slides
-	$amiiboCarousel.bind("slide.bs.carousel", (e) => {
+	// Start space traders carousel
+	$('#space-traders-indicators.carousel').carousel({
+		interval: 20000
+	});
+
+	// All carousels
+	let $allCarousels = $(".portfolio-carousel");
+
+	// Detect when any one of the portfolio carousel slides.
+	$allCarousels.bind("slide.bs.carousel", (e) => {
 		// Need to wait for the Bootstrap to add the carousel-item-next class to the carousel item.
 		setTimeout(() => {
 			let prevOrNext = e.target.getElementsByClassName("carousel-item-next")[0] ?? e.target.getElementsByClassName("carousel-item-prev")[0];
 			let page = prevOrNext.getAttribute("data-page");
 			console.log(`Going to ${page}`);
-			let changeToPage = $(`.portfolio-carousel--text-container > div[data-page="${page}"]`)
-			changeToPage.css({ display: "block", opacity: 1 });
+			let carouselName = e.target.getAttribute('data-carousel-name');
 
+			// Find the page we are moving to and display the text for that page.
+			$(`.portfolio-carousel--text-container[data-associated-carousel="${carouselName}"] > div[data-page="${page}"]`).css({ display: "block", opacity: 1 });
 
-			$(`.portfolio-carousel--text-container > div[data-page]:not([data-page="${page}"])`).css("display", "none");
+			// Hide all of the text that doesn't match the page that the carousel is moving to.
+			$(`.portfolio-carousel--text-container[data-associated-carousel="${carouselName}"] > div[data-page]:not([data-page="${page}"])`).css("display", "none");
 		}, 50);
 	});
 

@@ -58,7 +58,7 @@
             </div>
         </div>
 
-        
+
 
         <div class="my-projects-section">
             <div class="my-projects--heading pb-md-3">
@@ -76,15 +76,15 @@
 
             ------------------->
 
+            <!-- Button -->
             <div class="text-center mx-auto pt-5 pt-md-3 position-relative">
                 <div class="snap-to-element-2" id="amiibo-app-button"></div>
                 <div id="amiibo-app-button" class="subsection-title btn-main--container" data-text="Amiibo App"
                     data-href="https://github.com/RyanLawWilson/AmiiboCollector" data-variant-danger></div>
             </div>
 
-
+            <!-- Heading text | Overview of the Project -->
             <div class="carousel-container">
-
                 <div class="col-12 col-lg-10 col-xl-8 mx-auto pb-4">
                     <p>
                         This app is themed around Amiibos. You can
@@ -96,11 +96,9 @@
                     </p>
                 </div>
 
-
+                <!-- Amiibo Carousel -->
                 <div class="col-12 col-lg-10 col-xl-8 mx-auto px-5">
-
-                    <div id="amiibo-indicators" class="carousel slide portfolio-carousel" data-ride="carousel">
-
+                    <div id="amiibo-indicators" class="carousel slide portfolio-carousel" data-ride="carousel" data-carousel-name="Amiibo">
                         <ol class="carousel-indicators portfolio-carousel-indicators-list">
                             <li data-target="#amiibo-indicators" data-slide-to="0" class="active"></li>
                             <li data-target="#amiibo-indicators" data-slide-to="1"></li>
@@ -151,7 +149,8 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-lg-10 col-xl-8 mx-auto portfolio-carousel--text-container">
+                <!-- Text Content for Amiibo Carousel -->
+                <div class="col-12 col-lg-10 col-xl-8 mx-auto portfolio-carousel--text-container" data-associated-carousel="Amiibo">
                     <div data-page="API" style="opacity: 1; display: block">
                         <h2 class="text-center py-2 mb-0">API Page</h2>
                         <p>
@@ -163,36 +162,36 @@
                     <div data-page="BS_Scrape">
                         <h2 class="text-center py-2 mb-0">Nintendo News page (Beautiful Soup)</h2>
                         <p>
-                            The website that I am scraping from is 
-                            <a href="https://nintendonews.com/" target="_blank">nintendonews.com</a>. I am using the 
-                            requests module and Beautiful Soup to scrape the page. 
-                            The user can enter text they want to search for, a particular timeframe, and 
-                            how many articles that should be displayed. The URL for the source article is 
-                            found when scraping the nintendonews site and is displayed on the page so that 
+                            The website that I am scraping from is
+                            <a href="https://nintendonews.com/" target="_blank">nintendonews.com</a>. I am using the
+                            requests module and Beautiful Soup to scrape the page.
+                            The user can enter text they want to search for, a particular timeframe, and
+                            how many articles that should be displayed. The URL for the source article is
+                            found when scraping the nintendonews site and is displayed on the page so that
                             users can go directly to the article without going through nintendonews.
                         </p>
                     </div>
                     <div data-page="Index">
                         <h2 class="text-center py-2 mb-0">Index Page</h2>
                         <p>
-                            The Index page displays all of the Amiibos stored in the database. 
-                            The Amiibo information is organized in a table. From the table you 
+                            The Index page displays all of the Amiibos stored in the database.
+                            The Amiibo information is organized in a table. From the table you
                             can also view more details about an Amiibo by clicking the details button on the left.
                         </p>
                     </div>
                     <div data-page="Create">
                         <h2 class="text-center py-2 mb-0">Create Page</h2>
                         <p>
-                            the user enters in the Amiibo name, game series, purchase date, purchase amount, and the 
-                            quantity. After the form is submitted, the amiibo_db method is called which saves 
+                            the user enters in the Amiibo name, game series, purchase date, purchase amount, and the
+                            quantity. After the form is submitted, the amiibo_db method is called which saves
                             the Amiibo if the form is valid.
                         </p>
                     </div>
                     <div data-page="Details">
                         <h2 class="text-center py-2 mb-0">Details Page</h2>
                         <p>
-                            Clicking on the details button on the Index page will bring you to this page. 
-                            Here, you can see the image associated with your Amiibo 
+                            Clicking on the details button on the Index page will bring you to this page.
+                            Here, you can see the image associated with your Amiibo
                             <i style="font-weight: 400;">(future feature: use the AmiiboAPI to get the image) </i>
                             and all of the other information associated with that Amiibo.
                         </p>
@@ -200,17 +199,17 @@
                     <div data-page="Edit">
                         <h2 class="text-center py-2 mb-0">Edit Page</h2>
                         <p>
-                            To Edit an Amiibo, click the 'Edit Amiibo' button on the details page. The edit page displays a 
-                            form populated with that particular Amiibo's information. Editing some of the values in the fields 
+                            To Edit an Amiibo, click the 'Edit Amiibo' button on the details page. The edit page displays a
+                            form populated with that particular Amiibo's information. Editing some of the values in the fields
                             and clicking 'Confirm Changes' will edit that Amiibo.
                         </p>
                     </div>
                     <div data-page="Delete">
                         <h2 class="text-center py-2 mb-0">Delete Page</h2>
                         <p>
-                            Instead of a separate made for the delete feature, I created a modal. 
-                            On the details page of any Amiibo, clicking the 'Delete Amiibo' button 
-                            will bring up the modal. Confirming will delete the Amiibo from the 
+                            Instead of a separate made for the delete feature, I created a modal.
+                            On the details page of any Amiibo, clicking the 'Delete Amiibo' button
+                            will bring up the modal. Confirming will delete the Amiibo from the
                             database and bring you back to the Index page.
                         </p>
                     </div>
@@ -223,6 +222,7 @@
 
             ------------------------>
 
+            <!-- Button -->
             <div class="text-center mx-auto pt-5 pt-md-3 position-relative">
                 <div class="snap-to-element-2" id="space-traders-button"></div>
                 <div id="amiibo-app-button" class="subsection-title btn-main--container" data-text="Space Traders"
@@ -231,55 +231,35 @@
 
             <div class="carousel-container">
 
+                <!-- Heading text | Overview of the Project -->
                 <div class="col-12 col-lg-10 col-xl-8 mx-auto pb-4">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                        Voluptate nostrum hic nihil mollitia sunt ullam necessitatibus 
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Voluptate nostrum hic nihil mollitia sunt ullam necessitatibus
                         sit est iste, cumque praesentium, magnam amet saepe dignissimos
                          cupiditate atque, laboriosam assumenda maiores.
                          <a href="https://spacetraders.io/#how-to-play-guide">Space Traders</a>
                     </p>
                 </div>
 
-
+                <!-- Space Traders Carousel -->
                 <div class="col-12 col-lg-10 col-xl-8 mx-auto px-5">
-
-                    <div id="space-traders-indicators" class="carousel slide portfolio-carousel" data-ride="carousel">
-
+                    <div id="space-traders-indicators" class="carousel slide portfolio-carousel" data-ride="carousel" data-carousel-name="Space Traders">
                         <ol class="carousel-indicators portfolio-carousel-indicators-list">
                             <li data-target="#space-traders-indicators" data-slide-to="0" class="active"></li>
                             <li data-target="#space-traders-indicators" data-slide-to="1"></li>
                             <li data-target="#space-traders-indicators" data-slide-to="2"></li>
-                            <li data-target="#space-traders-indicators" data-slide-to="3"></li>
-                            <li data-target="#space-traders-indicators" data-slide-to="4"></li>
-                            <li data-target="#space-traders-indicators" data-slide-to="5"></li>
-                            <li data-target="#space-traders-indicators" data-slide-to="6"></li>
                         </ol>
 
                         <div class="carousel-inner">
-                            <div data-page="API" class="carousel-item active">
-                                <!-- <img class="d-block w-100" data-gifffer-duration="16000" data-gifffer-width="100%"
-                                    data-gifffer-height="100%" data-gifffer="./images/Amiibo_App/gifs/API.gif"
-                                    data-gifffer-alt="Index" /> -->
+                            <div data-page="TEMP1" class="carousel-item active">
                                 <img class="d-block w-100" src="./images/Amiibo_App/gifs/API.gif" />
                             </div>
-                            <div data-page="BS_Scrape" class="carousel-item">
+                            <div data-page="TEMP2" class="carousel-item">
                                 <img class="d-block w-100" src="./images/Amiibo_App/gifs/BS_Scrape.gif" />
                             </div>
-                            <div data-page="Index" class="carousel-item">
+                            <div data-page="TEMP3" class="carousel-item">
                                 <img class="d-block w-100" src="./images/Amiibo_App/gifs/Index.gif" />
-                            </div>
-                            <div data-page="Create" class="carousel-item">
-                                <img class="d-block w-100" src="./images/Amiibo_App/gifs/Create.gif" />
-                            </div>
-                            <div data-page="Details" class="carousel-item">
-                                <img class="d-block w-100" src="./images/Amiibo_App/gifs/Details.gif" />
-                            </div>
-                            <div data-page="Edit" class="carousel-item">
-                                <img class="d-block w-100" src="./images/Amiibo_App/gifs/Edit.gif" />
-                            </div>
-                            <div data-page="Delete" class="carousel-item">
-                                <img class="d-block w-100" src="./images/Amiibo_App/gifs/Delete.gif" />
                             </div>
                         </div>
 
@@ -296,67 +276,30 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-lg-10 col-xl-8 mx-auto portfolio-carousel--text-container">
-                    <div data-page="API" style="opacity: 1; display: block">
-                        <h2 class="text-center py-2 mb-0">API Page</h2>
+                <!-- Text Content for Carousel -->
+                <div class="col-12 col-lg-10 col-xl-8 mx-auto portfolio-carousel--text-container" data-associated-carousel="Space Traders">
+                    <div data-page="TEMP1" style="opacity: 1; display: block">
+                        <h2 class="text-center py-2 mb-0">TEMP1 Page</h2>
                         <p>
-                            I use Python's requests module to contact the API and get data about Amiibos.
-                            An API that I used to complement my App was the AmiiboAPI. This API has nearly
-                            all of the Amiibos in existence as well as images to accompany them.
+                            1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium placeat 
+                            debitis deserunt molestiae eum voluptates consequatur quisquam quis possimus 
+                            eaque. Accusantium dignissimos vitae sapiente odio minus saepe ab quod nisi.
                         </p>
                     </div>
-                    <div data-page="BS_Scrape">
-                        <h2 class="text-center py-2 mb-0">Nintendo News page (Beautiful Soup)</h2>
+                    <div data-page="TEMP2">
+                        <h2 class="text-center py-2 mb-0">TEMP2 Page</h2>
                         <p>
-                            The website that I am scraping from is 
-                            <a href="https://nintendonews.com/" target="_blank">nintendonews.com</a>. I am using the 
-                            requests module and Beautiful Soup to scrape the page. 
-                            The user can enter text they want to search for, a particular timeframe, and 
-                            how many articles that should be displayed. The URL for the source article is 
-                            found when scraping the nintendonews site and is displayed on the page so that 
-                            users can go directly to the article without going through nintendonews.
+                            2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium placeat 
+                            debitis deserunt molestiae eum voluptates consequatur quisquam quis possimus 
+                            eaque. Accusantium dignissimos vitae sapiente odio minus saepe ab quod nisi.
                         </p>
                     </div>
-                    <div data-page="Index">
-                        <h2 class="text-center py-2 mb-0">Index Page</h2>
+                    <div data-page="TEMP3">
+                        <h2 class="text-center py-2 mb-0">TEMP3 Page</h2>
                         <p>
-                            The Index page displays all of the Amiibos stored in the database. 
-                            The Amiibo information is organized in a table. From the table you 
-                            can also view more details about an Amiibo by clicking the details button on the left.
-                        </p>
-                    </div>
-                    <div data-page="Create">
-                        <h2 class="text-center py-2 mb-0">Create Page</h2>
-                        <p>
-                            the user enters in the Amiibo name, game series, purchase date, purchase amount, and the 
-                            quantity. After the form is submitted, the amiibo_db method is called which saves 
-                            the Amiibo if the form is valid.
-                        </p>
-                    </div>
-                    <div data-page="Details">
-                        <h2 class="text-center py-2 mb-0">Details Page</h2>
-                        <p>
-                            Clicking on the details button on the Index page will bring you to this page. 
-                            Here, you can see the image associated with your Amiibo 
-                            <i style="font-weight: 400;">(future feature: use the AmiiboAPI to get the image) </i>
-                            and all of the other information associated with that Amiibo.
-                        </p>
-                    </div>
-                    <div data-page="Edit">
-                        <h2 class="text-center py-2 mb-0">Edit Page</h2>
-                        <p>
-                            To Edit an Amiibo, click the 'Edit Amiibo' button on the details page. The edit page displays a 
-                            form populated with that particular Amiibo's information. Editing some of the values in the fields 
-                            and clicking 'Confirm Changes' will edit that Amiibo.
-                        </p>
-                    </div>
-                    <div data-page="Delete">
-                        <h2 class="text-center py-2 mb-0">Delete Page</h2>
-                        <p>
-                            Instead of a separate made for the delete feature, I created a modal. 
-                            On the details page of any Amiibo, clicking the 'Delete Amiibo' button 
-                            will bring up the modal. Confirming will delete the Amiibo from the 
-                            database and bring you back to the Index page.
+                            3 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium placeat 
+                            debitis deserunt molestiae eum voluptates consequatur quisquam quis possimus 
+                            eaque. Accusantium dignissimos vitae sapiente odio minus saepe ab quod nisi.
                         </p>
                     </div>
                 </div>
@@ -408,7 +351,7 @@
 
     <!-- Nav Bar -->
     <!-- <div class="navBar">
-            <a class="active" href="#Home">Home</a> 
+            <a class="active" href="#Home">Home</a>
             <a href="#Slideshow">Slideshow</a>
             <a href="#About">About</a>
             <a href="#SQL" style="letter-spacing: 10px;">SQL</a>
@@ -430,10 +373,10 @@
             <p>
                 Take a look at the stuff that I've done.  I've programmed in many different
                 languages and built some cool projects in each.  Check them out below.
-                FILLER TEXT.  FILLER TEXT.  FILLER TEXT.  FILLER TEXT.  FILLER TEXT.  
+                FILLER TEXT.  FILLER TEXT.  FILLER TEXT.  FILLER TEXT.  FILLER TEXT.
                 FILLER TEXT.  FILLER TEXT.  FILLER TEXT.  FILLER TEXT.<br><br>
-                
-                My name is Ryan.  This is my portfolio website.  
+
+                My name is Ryan.  This is my portfolio website.
                 I'll tell you who I am and my background experience.<br><br>
 
                 Thank you for stopping by!<br><br>
@@ -443,62 +386,62 @@
 
 
     <!-- <div id="Slideshow">
-            <div id="Slideshow_Background"> 
+            <div id="Slideshow_Background">
                 <div id="Slideshow_Container">
-                
+
                     <div class="mySlides fade">
                         <div class="Slide_Number">1 / 6</div>
                         <img class="Slide_Show_Images" src="images/frustrated.jpg" style="width:100%">
                             <div class="text">Need help with a project?</div>
                     </div>
-                    
+
                     <div class="mySlides fade">
                         <div class="Slide_Number">2 / 6</div>
                         <img class="Slide_Show_Images" src="images/bigbrain.jpg" style="width:100%">
                             <div class="text">I am a full-stack software developer, trained in: HTML, CSS, JavaScript, Java, C#, SQL and more</div>
                     </div>
-            
+
                     <div class="mySlides fade">
                         <div class="Slide_Number">3 / 6</div>
                         <img class="Slide_Show_Images" src="images/python.jpg" style="width:100%">
                             <div class="text">the popular programming language Python,</div>
                     </div>
-            
+
                     <div class="mySlides fade">
                         <div class="Slide_Number">4 / 6</div>
                         <img class="Slide_Show_Images" src="images/csharp.png" style="width:100%">
                             <div class="text">C#, .NET Framework, ASP.NET, MVC,</div>
                     </div>
-            
+
                     <div class="mySlides fade">
                         <div class="Slide_Number">5 / 6</div>
                         <img class="Slide_Show_Images" src="images/databases.png" style="width:100%">
                             <div class="text">back end development, databases and SQL.</div>
                         </div>
-            
+
                     <div class="mySlides fade">
                         <div class="Slide_Number">6 / 6</div>
                         <img class="Slide_Show_Images" src="images/linkedinShot.jpg" style="width:100%">
-                            <div class="text"> 
+                            <div class="text">
                             <a onclick="openForm()" href="#Contact" style="color:white;">Please contact me</a>
                             </div>
                     </div>
-                
+
                         <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
                         <a class="Next" onclick="plusSlides(1)">&#10095;</a>
-                    
+
                 </div>
                 <br>
-            
+
                 <div style="text-align:center">
-                
-                    <span class="dot" onclick="currentSlide(1)"></span> 
-                    <span class="dot" onclick="currentSlide(2)"></span> 
-                    <span class="dot" onclick="currentSlide(3)"></span> 
-                    <span class="dot" onclick="currentSlide(4)"></span> 
-                    <span class="dot" onclick="currentSlide(5)"></span> 
-                    <span class="dot" onclick="currentSlide(6)"></span> 
-            
+
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+
                 </div>
             </div>
         </div> -->
@@ -521,18 +464,18 @@
             var slides = document.getElementsByClassName("mySlides");
             var dots = document.getElementsByClassName("dot");
 
-            if (n > slides.length) {slideIndex = 1}    
+            if (n > slides.length) {slideIndex = 1}
             if (n < 1) {slideIndex = slides.length}
 
             for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
+                slides[i].style.display = "none";
             }
 
             for (i = 0; i < dots.length; i++) {
                 dots[i].className = dots[i].className.replace(" active", "");
             }
 
-            slides[slideIndex-1].style.display = "block";  
+            slides[slideIndex-1].style.display = "block";
             dots[slideIndex-1].className += " active";
         }
     </script> -->
@@ -546,12 +489,12 @@
                 <p>
                     I am a software developer who enjoys building software.  Video games
                     occupy my free time.<br><br>
-                
-                    I'm still in <a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a>'s software developver bootcamp.  
-                    Hopefully I can get a job when I graduate.  These are the 
+
+                    I'm still in <a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a>'s software developver bootcamp.
+                    Hopefully I can get a job when I graduate.  These are the
                     programming languages that I am familiar with:<br>
                     HTML, CSS, JavaScript, SQL, Java, Python.<br><br>
-                
+
                     <a href="#contact">Contact</a> me below with any questions.
                 </p>
             </div>
@@ -568,9 +511,9 @@
             <div class="column1">
                 <h1 style="letter-spacing: 0.66vw;">Python</h1>
                 <p>
-                    I completed the Python course from The Tech Academy.  I enjoyed Python a lot 
+                    I completed the Python course from The Tech Academy.  I enjoyed Python a lot
                     but I may need some more practice with the django framework.<br><br>
-                
+
                     <a href="https://github.com/RyanLawWilson/Python-django-Project/tree/master/mainapp" target="_blank">Check out my Django project</a>
                 </p>
             </div>
@@ -583,7 +526,7 @@
                 <p>
                     I recently completed the SQL course from The Tech Academy.  I learned a lot
                     about creating, dropping, and modifying databases and tables.<br><br>
-                
+
                     <a href="https://github.com/RyanLawWilson/SQL-Final-Project" target="_blank">Check out my SQL projects!</a>
                 </p>
             </div>
@@ -602,7 +545,7 @@
                 <p>
                     C# was the funnest course that I completed, I think.  Check out some of
                     the projects I did in VS using C#<br><br>
-                
+
                     <a href="https://github.com/RyanLawWilson/TTA-C-Sharp_Assignment_RandomBattles_v2" target="_blank">This is a cool game I made with C#</a>
                 </p>
             </div>
@@ -622,9 +565,9 @@
         </div> -->
 
     <!-- Contact -->
-    <!-- <div id="Contact"> 
+    <!-- <div id="Contact">
             <button onclick="openForm()" class="Pop_Up_Button"> CONTACT </button>
-            
+
             <div class="form-popup" id="myForm"> -->
     <!-- <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container"> -->
     <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
@@ -632,16 +575,16 @@
 
                     <label for="name"><b>Name</b></label>
                     <input type="text" placeholder="Type your name here" name="name" required>
-                    
+
                     <label for="phone"><b>Phone</b></label>
                     <input type="text" placeholder="Enter your phone number here" name="phone">
-                    
-                    <label for="email"><b>Email</b></label>		
+
+                    <label for="email"><b>Email</b></label>
                     <input type="text" placeholder="Type your email address here" name="email" required>
-                    
+
                     <label for="message"><b>Message</b></label>
                     <input type="text" placeholder="Type your message here" name="message">
-                    
+
                     <button type="submit" class="btn">SUBMIT</button>
                     <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
                 </form>
