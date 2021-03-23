@@ -7,60 +7,9 @@ $(function () {
 
 	findAndCreateButtons();
 
-	// Start amiibo carousel
-	$('#amiibo-indicators.carousel').carousel({
-		interval: 30000
-	});
+	activateBootstrapCarousels();
 
-	// Start space traders carousel
-	$('#space-traders-indicators.carousel').carousel({
-		interval: 20000
-	});
-
-	// All carousels
-	let $allCarousels = $(".portfolio-carousel");
-
-	// Detect when any one of the portfolio carousel slides.
-	$allCarousels.bind("slide.bs.carousel", (e) => {
-		// Need to wait for the Bootstrap to add the carousel-item-next class to the carousel item.
-		setTimeout(() => {
-			let prevOrNext = e.target.getElementsByClassName("carousel-item-next")[0] ?? e.target.getElementsByClassName("carousel-item-prev")[0];
-			let page = prevOrNext.getAttribute("data-page");
-			console.log(`Going to ${page}`);
-			let carouselName = e.target.getAttribute('data-carousel-name');
-
-			// Find the page we are moving to and display the text for that page.
-			$(`.portfolio-carousel--text-container[data-associated-carousel="${carouselName}"] > div[data-page="${page}"]`).css({ display: "block", opacity: 1 });
-
-			// Hide all of the text that doesn't match the page that the carousel is moving to.
-			$(`.portfolio-carousel--text-container[data-associated-carousel="${carouselName}"] > div[data-page]:not([data-page="${page}"])`).css("display", "none");
-		}, 50);
-	});
-
-
-	// https://github.com/krasimir/gifffer
-	// Gifffer({
-	// 	playButtonStyles: {
-	// 		'width': '60px',
-	// 		'height': '60px',
-	// 		'border-radius': '30px',
-	// 		'background': 'rgba(50, 49, 48, 0.9)',
-	// 		'position': 'absolute',
-	// 		'top': '50%',
-	// 		'left': '50%',
-	// 		'margin': '-30px 0 0 -30px'
-	// 	},
-	// 	playButtonIconStyles: {
-	// 		'width': '0',
-	// 		'height': '0',
-	// 		'border-top': '14px solid transparent',
-	// 		'border-bottom': '14px solid transparent',
-	// 		'border-left': '14px solid rgba(255, 0, 0, 0.8)',
-	// 		'position': 'absolute',
-	// 		'left': '26px',
-	// 		'top': '16px'
-	// 	}
-	// });
+	//initializeGifffer();
 
 	console.log("=== All JS Complete ===");
 });
@@ -110,6 +59,64 @@ function findAndCreateButtons() {
 		$button.on("mousedown", function () {
 			// c("Button Clicked!");
 		});
+	});
+}
+
+function activateBootstrapCarousels() {
+	// Start amiibo carousel
+	$('#amiibo-indicators.carousel').carousel({
+		interval: 30000
+	});
+
+	// Start space traders carousel
+	$('#space-traders-indicators.carousel').carousel({
+		interval: 20000
+	});
+
+	// All carousels
+	let $allCarousels = $(".portfolio-carousel");
+
+	// Detect when any one of the portfolio carousel slides.
+	$allCarousels.bind("slide.bs.carousel", (e) => {
+		// Need to wait for the Bootstrap to add the carousel-item-next class to the carousel item.
+		setTimeout(() => {
+			let prevOrNext = e.target.getElementsByClassName("carousel-item-next")[0] ?? e.target.getElementsByClassName("carousel-item-prev")[0];
+			let page = prevOrNext.getAttribute("data-page");
+			console.log(`Going to ${page}`);
+			let carouselName = e.target.getAttribute('data-carousel-name');
+
+			// Find the page we are moving to and display the text for that page.
+			$(`.portfolio-carousel--text-container[data-associated-carousel="${carouselName}"] > div[data-page="${page}"]`).css({ display: "block", opacity: 1 });
+
+			// Hide all of the text that doesn't match the page that the carousel is moving to.
+			$(`.portfolio-carousel--text-container[data-associated-carousel="${carouselName}"] > div[data-page]:not([data-page="${page}"])`).css("display", "none");
+		}, 50);
+	});
+}
+
+function initializeGifffer() {
+	// https://github.com/krasimir/gifffer
+	Gifffer({
+		playButtonStyles: {
+			'width': '60px',
+			'height': '60px',
+			'border-radius': '30px',
+			'background': 'rgba(50, 49, 48, 0.9)',
+			'position': 'absolute',
+			'top': '50%',
+			'left': '50%',
+			'margin': '-30px 0 0 -30px'
+		},
+		playButtonIconStyles: {
+			'width': '0',
+			'height': '0',
+			'border-top': '14px solid transparent',
+			'border-bottom': '14px solid transparent',
+			'border-left': '14px solid rgba(255, 0, 0, 0.8)',
+			'position': 'absolute',
+			'left': '26px',
+			'top': '16px'
+		}
 	});
 }
 
