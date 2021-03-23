@@ -2,8 +2,7 @@ console.log("Reading JS");
 $(() => {
 	// Smooth load in ***NOT FULLY IMPLEMENTED***
 	console.log("=== Document Loaded ===");
-	var $body = $("body");
-	$body.addClass("smooth-load-transition");
+	$("body").addClass("smooth-load-transition");
 
 	findAndCreateButtons();
 
