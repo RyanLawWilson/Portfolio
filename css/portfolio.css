@@ -118,19 +118,19 @@ body.smooth-load-transition {
     right: -50px;
 }
 
-.amiibo-indicatros-list {
+.amiibo-indicators-list {
     bottom: -30px;
     align-items: center;
     margin-bottom: 0;
     height: 20px;
 }
 
-.amiibo-indicatros-list > li {
+.amiibo-indicators-list > li {
     transition: 0.15s;
     height: 4px
 }
 
-.amiibo-indicatros-list > li:hover {
+.amiibo-indicators-list > li:hover {
     height: 10px;
 }
 
@@ -142,6 +142,19 @@ body.smooth-load-transition {
 .gifffer-play-button {
     transition: 0.5s;
 }
+
+.amiibo-text--container {
+    
+}
+
+.amiibo-text--container > div {
+    display: none;
+    opacity: 0;
+    transition: 0.25s;
+}
+
+
+
 
 .carousel-item.active:hover .gifffer-play-button {
     transform: scale(1.25);

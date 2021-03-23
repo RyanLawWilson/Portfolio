@@ -95,30 +95,40 @@
 
                     <div id="amiibo-indicators" class="carousel slide amiibo-carousel" data-ride="carousel">
 
-                        <ol class="carousel-indicators amiibo-indicatros-list">
+                        <ol class="carousel-indicators amiibo-indicators-list">
                             <li data-target="#amiibo-indicators" data-slide-to="0" class="active"></li>
                             <li data-target="#amiibo-indicators" data-slide-to="1"></li>
                             <li data-target="#amiibo-indicators" data-slide-to="2"></li>
+                            <li data-target="#amiibo-indicators" data-slide-to="3"></li>
+                            <li data-target="#amiibo-indicators" data-slide-to="4"></li>
+                            <li data-target="#amiibo-indicators" data-slide-to="5"></li>
+                            <li data-target="#amiibo-indicators" data-slide-to="6"></li>
                         </ol>
 
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
+                            <div data-page="API" class="carousel-item active">
                                 <!-- <img class="d-block w-100" data-gifffer-duration="16000" data-gifffer-width="100%"
                                     data-gifffer-height="100%" data-gifffer="./images/Amiibo_App/gifs/API.gif"
                                     data-gifffer-alt="Index" /> -->
-                                    <img class="d-block w-100" src="./images/Amiibo_App/gifs/API.gif" />
+                                <img class="d-block w-100" src="./images/Amiibo_App/gifs/API.gif" />
                             </div>
-                            <div class="carousel-item">
-                                <!-- <img class="d-block w-100" data-gifffer-duration="12000" data-gifffer-width="100%"
-                                    data-gifffer-height="100%" data-gifffer="./images/Amiibo_App/gifs/BS_Scrape.gif"
-                                    data-gifffer-alt="adsf slide" /> -->
-                                    <img class="d-block w-100" src="./images/Amiibo_App/gifs/BS_Scrape.gif" />
+                            <div data-page="BS_Scrape" class="carousel-item">
+                                <img class="d-block w-100" src="./images/Amiibo_App/gifs/BS_Scrape.gif" />
                             </div>
-                            <div class="carousel-item">
-                                <!-- <img class="d-block w-100" data-gifffer-duration="12000" data-gifffer-width="100%"
-                                    data-gifffer-height="100%" data-gifffer="./images/Amiibo_App/gifs/Index.gif"
-                                    data-gifffer-alt="First slide" /> -->
-                                    <img class="d-block w-100" src="./images/Amiibo_App/gifs/Index.gif" />
+                            <div data-page="Index" class="carousel-item">
+                                <img class="d-block w-100" src="./images/Amiibo_App/gifs/Index.gif" />
+                            </div>
+                            <div data-page="Create" class="carousel-item">
+                                <img class="d-block w-100" src="./images/Amiibo_App/gifs/Create.gif" />
+                            </div>
+                            <div data-page="Details" class="carousel-item">
+                                <img class="d-block w-100" src="./images/Amiibo_App/gifs/Details.gif" />
+                            </div>
+                            <div data-page="Edit" class="carousel-item">
+                                <img class="d-block w-100" src="./images/Amiibo_App/gifs/Edit.gif" />
+                            </div>
+                            <div data-page="Delete" class="carousel-item">
+                                <img class="d-block w-100" src="./images/Amiibo_App/gifs/Delete.gif" />
                             </div>
                         </div>
 
@@ -135,17 +145,69 @@
                     </div>
                 </div>
 
-
-
-
-
-                <div class="col-12 col-lg-10 col-xl-8 mx-auto pb-4">
-                    <h3 class="text-center py-2 mb-0">Index Page</h3>
-                    <p>
-                        The Index page displays all of the Amiibos stored in the database. 
-                        The Amiibo information is organized in a table. From the table you 
-                        can also view more details about an Amiibo by clicking the details button on the left.
-                    </p>
+                <div class="col-12 col-lg-10 col-xl-8 mx-auto amiibo-text--container">
+                    <div data-page="API" style="opacity: 1; display: block">
+                        <h3 class="text-center py-2 mb-0">API Page</h3>
+                        <p>
+                            I use Python's requests module to contact the API and get data about Amiibos.
+                            An API that I used to complement my App was the AmiiboAPI. This API has nearly
+                            all of the Amiibos in existence as well as images to accompany them.
+                        </p>
+                    </div>
+                    <div data-page="BS_Scrape">
+                        <h3 class="text-center py-2 mb-0">Nintendo News page (Beautiful Soup)</h3>
+                        <p>
+                            The website that I am scraping from is 
+                            <a href="https://nintendonews.com/" target="_blank">nintendonews.com</a>. I am using the 
+                            requests module and Beautiful Soup to scrape the page. 
+                            The user can enter text they want to search for, a particular timeframe, and 
+                            how many articles that should be displayed. The URL for the source article is 
+                            found when scraping the nintendonews site and is displayed on the page so that 
+                            users can go directly to the article without going through nintendonews.
+                        </p>
+                    </div>
+                    <div data-page="Index">
+                        <h3 class="text-center py-2 mb-0">Index Page</h3>
+                        <p>
+                            The Index page displays all of the Amiibos stored in the database. 
+                            The Amiibo information is organized in a table. From the table you 
+                            can also view more details about an Amiibo by clicking the details button on the left.
+                        </p>
+                    </div>
+                    <div data-page="Create">
+                        <h3 class="text-center py-2 mb-0">Create Page</h3>
+                        <p>
+                            the user enters in the Amiibo name, game series, purchase date, purchase amount, and the 
+                            quantity. After the form is submitted, the amiibo_db method is called which saves 
+                            the Amiibo if the form is valid.
+                        </p>
+                    </div>
+                    <div data-page="Details">
+                        <h3 class="text-center py-2 mb-0">Details Page</h3>
+                        <p>
+                            Clicking on the details button on the Index page will bring you to this page. 
+                            Here, you can see the image associated with your Amiibo 
+                            <i style="font-weight: 400;">(future feature: use the AmiiboAPI to get the image) </i>
+                            and all of the other information associated with that Amiibo.
+                        </p>
+                    </div>
+                    <div data-page="Edit">
+                        <h3 class="text-center py-2 mb-0">Edit Page</h3>
+                        <p>
+                            To Edit an Amiibo, click the 'Edit Amiibo' button on the details page. The edit page displays a 
+                            form populated with that particular Amiibo's information. Editing some of the values in the fields 
+                            and clicking 'Confirm Changes' will edit that Amiibo.
+                        </p>
+                    </div>
+                    <div data-page="Delete">
+                        <h3 class="text-center py-2 mb-0">Delete Page</h3>
+                        <p>
+                            Instead of a separate made for the delete feature, I created a modal. 
+                            On the details page of any Amiibo, clicking the 'Delete Amiibo' button 
+                            will bring up the modal. Confirming will delete the Amiibo from the 
+                            database and bring you back to the Index page.
+                        </p>
+                    </div>
                 </div>
             </div>
 

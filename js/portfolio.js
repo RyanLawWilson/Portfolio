@@ -8,19 +8,25 @@ $(function () {
 	findAndCreateButtons();
 
 	// Start the carousel
-	$('#amiibo-indicators.carousel').carousel({
+	let $amiiboCarousel = $('#amiibo-indicators.carousel');
+	$amiiboCarousel.carousel({
 		interval: 30000
 	});
 
+	// Detect when the amiibo carousel slides
+	$amiiboCarousel.bind("slide.bs.carousel", (e) => {
+		// Need to wait for the Bootstrap to add the carousel-item-next class to the carousel item.
+		setTimeout(() => {
+			let prevOrNext = e.target.getElementsByClassName("carousel-item-next")[0] ?? e.target.getElementsByClassName("carousel-item-prev")[0];
+			let page = prevOrNext.getAttribute("data-page");
+			console.log(`Going to ${page}`);
+			let changeToPage = $(`.amiibo-text--container > div[data-page="${page}"]`)
+			changeToPage.css({ display: "block", opacity: 1 });
 
-	
 
-
-
-
-
-
-
+			$(`.amiibo-text--container > div[data-page]:not([data-page="${page}"])`).css("display", "none");
+		}, 50);
+	});
 
 
 	// https://github.com/krasimir/gifffer
