@@ -1,5 +1,5 @@
 console.log("Reading JS");
-$(function () {
+$(() => {
 	// Smooth load in ***NOT FULLY IMPLEMENTED***
 	console.log("=== Document Loaded ===");
 	var $body = $("body");
