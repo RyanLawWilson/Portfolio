@@ -66,9 +66,15 @@
                     My Projects
                     <div class="snap-to-element" id="projects"></div>
                     <a href="#amiibo-app-button"><img class="jigglypuff-gif" src="./images/Amiibo_App/gifs/Jigglypuff.gif" /></a>
-                    <a href="#amiibo-app-button"><img class="spaceship-gif" src="./images/spaceship.gif" /></a>
+                    <a href="#space-traders-button"><img class="spaceship-gif" src="./images/spaceship.gif" /></a>
                 </h1>
             </div>
+
+            <!-----------------
+
+                Amiibo Area
+
+            ------------------->
 
             <div class="text-center mx-auto pt-5 pt-md-3 position-relative">
                 <div class="snap-to-element-2" id="amiibo-app-button"></div>
@@ -77,15 +83,13 @@
             </div>
 
 
-
-
-            <div class="amiibo-carousel--container">
+            <div class="carousel-container">
 
                 <div class="col-12 col-lg-10 col-xl-8 mx-auto pb-4">
                     <p>
                         This app is themed around Amiibos. You can
                         create, edit, and delete your Amiibos and search for more Amiibos. I use the
-                        <a>AmiiboAPI</a> to search
+                        <a href="https://www.amiiboapi.com/">AmiiboAPI</a> to search
                         for all available Amiibos and display them on the page. You can also look at general
                         Nintendo news.
                         This page web scrapes nintendonews.com for the latest Nintendo articles.
@@ -95,9 +99,9 @@
 
                 <div class="col-12 col-lg-10 col-xl-8 mx-auto px-5">
 
-                    <div id="amiibo-indicators" class="carousel slide amiibo-carousel" data-ride="carousel">
+                    <div id="amiibo-indicators" class="carousel slide portfolio-carousel" data-ride="carousel">
 
-                        <ol class="carousel-indicators amiibo-indicators-list">
+                        <ol class="carousel-indicators portfolio-carousel-indicators-list">
                             <li data-target="#amiibo-indicators" data-slide-to="0" class="active"></li>
                             <li data-target="#amiibo-indicators" data-slide-to="1"></li>
                             <li data-target="#amiibo-indicators" data-slide-to="2"></li>
@@ -134,12 +138,12 @@
                             </div>
                         </div>
 
-                        <a class="carousel-control-prev amiibo-control--prev" href="#amiibo-indicators" role="button"
+                        <a class="carousel-control-prev portfolio-carousel-control--prev" href="#amiibo-indicators" role="button"
                             data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="sr-only">Previous</span>
                         </a>
-                        <a class="carousel-control-next amiibo-control--next" href="#amiibo-indicators" role="button"
+                        <a class="carousel-control-next portfolio-carousel-control--next" href="#amiibo-indicators" role="button"
                             data-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
@@ -147,7 +151,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-lg-10 col-xl-8 mx-auto amiibo-text--container">
+                <div class="col-12 col-lg-10 col-xl-8 mx-auto portfolio-carousel--text-container">
                     <div data-page="API" style="opacity: 1; display: block">
                         <h2 class="text-center py-2 mb-0">API Page</h2>
                         <p>
@@ -213,72 +217,150 @@
                 </div>
             </div>
 
+            <!-----------------------
 
+                Space Traders Area
 
+            ------------------------>
 
-
-            <!-- <p>Amiibo App Homepage</p>
-            <div class="img-section">
-                <img class="img-content" src="images/Amiibo_App/homepage.png">
+            <div class="text-center mx-auto pt-5 pt-md-3 position-relative">
+                <div class="snap-to-element-2" id="space-traders-button"></div>
+                <div id="amiibo-app-button" class="subsection-title btn-main--container" data-text="Space Traders"
+                    data-href="https://github.com/RyanLawWilson/space-traders" data-variant-primary></div>
             </div>
 
-            <div class="card-columns">
-                <div class="card img-section">
-                    <img class="card-img-top " src="images/Amiibo_App/Index.PNG">
-                    <div class="card-body">
-                        <h5 class="card-title text-decoration-underline">Index Page</h5>
-                        <p class="card-text">Shows the Amiibos that you have stored in the database.</p>
+            <div class="carousel-container">
+
+                <div class="col-12 col-lg-10 col-xl-8 mx-auto pb-4">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                        Voluptate nostrum hic nihil mollitia sunt ullam necessitatibus 
+                        sit est iste, cumque praesentium, magnam amet saepe dignissimos
+                         cupiditate atque, laboriosam assumenda maiores.
+                         <a href="https://spacetraders.io/#how-to-play-guide">Space Traders</a>
+                    </p>
+                </div>
+
+
+                <div class="col-12 col-lg-10 col-xl-8 mx-auto px-5">
+
+                    <div id="space-traders-indicators" class="carousel slide portfolio-carousel" data-ride="carousel">
+
+                        <ol class="carousel-indicators portfolio-carousel-indicators-list">
+                            <li data-target="#space-traders-indicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#space-traders-indicators" data-slide-to="1"></li>
+                            <li data-target="#space-traders-indicators" data-slide-to="2"></li>
+                            <li data-target="#space-traders-indicators" data-slide-to="3"></li>
+                            <li data-target="#space-traders-indicators" data-slide-to="4"></li>
+                            <li data-target="#space-traders-indicators" data-slide-to="5"></li>
+                            <li data-target="#space-traders-indicators" data-slide-to="6"></li>
+                        </ol>
+
+                        <div class="carousel-inner">
+                            <div data-page="API" class="carousel-item active">
+                                <!-- <img class="d-block w-100" data-gifffer-duration="16000" data-gifffer-width="100%"
+                                    data-gifffer-height="100%" data-gifffer="./images/Amiibo_App/gifs/API.gif"
+                                    data-gifffer-alt="Index" /> -->
+                                <img class="d-block w-100" src="./images/Amiibo_App/gifs/API.gif" />
+                            </div>
+                            <div data-page="BS_Scrape" class="carousel-item">
+                                <img class="d-block w-100" src="./images/Amiibo_App/gifs/BS_Scrape.gif" />
+                            </div>
+                            <div data-page="Index" class="carousel-item">
+                                <img class="d-block w-100" src="./images/Amiibo_App/gifs/Index.gif" />
+                            </div>
+                            <div data-page="Create" class="carousel-item">
+                                <img class="d-block w-100" src="./images/Amiibo_App/gifs/Create.gif" />
+                            </div>
+                            <div data-page="Details" class="carousel-item">
+                                <img class="d-block w-100" src="./images/Amiibo_App/gifs/Details.gif" />
+                            </div>
+                            <div data-page="Edit" class="carousel-item">
+                                <img class="d-block w-100" src="./images/Amiibo_App/gifs/Edit.gif" />
+                            </div>
+                            <div data-page="Delete" class="carousel-item">
+                                <img class="d-block w-100" src="./images/Amiibo_App/gifs/Delete.gif" />
+                            </div>
+                        </div>
+
+                        <a class="carousel-control-prev portfolio-carousel-control--prev" href="#space-traders-indicators" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next portfolio-carousel-control--next" href="#space-traders-indicators" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
                 </div>
 
-                <div class="card img-section">
-                    <img class="card-img-top " src="images/Amiibo_App/Create.PNG">
-                    <div class="card-body">
-                        <h5 class="card-title text-decoration-underline">Create Page</h5>
-                        <p class="card-text">Add an Amiibo to the database on this page.</p>
+                <div class="col-12 col-lg-10 col-xl-8 mx-auto portfolio-carousel--text-container">
+                    <div data-page="API" style="opacity: 1; display: block">
+                        <h2 class="text-center py-2 mb-0">API Page</h2>
+                        <p>
+                            I use Python's requests module to contact the API and get data about Amiibos.
+                            An API that I used to complement my App was the AmiiboAPI. This API has nearly
+                            all of the Amiibos in existence as well as images to accompany them.
+                        </p>
+                    </div>
+                    <div data-page="BS_Scrape">
+                        <h2 class="text-center py-2 mb-0">Nintendo News page (Beautiful Soup)</h2>
+                        <p>
+                            The website that I am scraping from is 
+                            <a href="https://nintendonews.com/" target="_blank">nintendonews.com</a>. I am using the 
+                            requests module and Beautiful Soup to scrape the page. 
+                            The user can enter text they want to search for, a particular timeframe, and 
+                            how many articles that should be displayed. The URL for the source article is 
+                            found when scraping the nintendonews site and is displayed on the page so that 
+                            users can go directly to the article without going through nintendonews.
+                        </p>
+                    </div>
+                    <div data-page="Index">
+                        <h2 class="text-center py-2 mb-0">Index Page</h2>
+                        <p>
+                            The Index page displays all of the Amiibos stored in the database. 
+                            The Amiibo information is organized in a table. From the table you 
+                            can also view more details about an Amiibo by clicking the details button on the left.
+                        </p>
+                    </div>
+                    <div data-page="Create">
+                        <h2 class="text-center py-2 mb-0">Create Page</h2>
+                        <p>
+                            the user enters in the Amiibo name, game series, purchase date, purchase amount, and the 
+                            quantity. After the form is submitted, the amiibo_db method is called which saves 
+                            the Amiibo if the form is valid.
+                        </p>
+                    </div>
+                    <div data-page="Details">
+                        <h2 class="text-center py-2 mb-0">Details Page</h2>
+                        <p>
+                            Clicking on the details button on the Index page will bring you to this page. 
+                            Here, you can see the image associated with your Amiibo 
+                            <i style="font-weight: 400;">(future feature: use the AmiiboAPI to get the image) </i>
+                            and all of the other information associated with that Amiibo.
+                        </p>
+                    </div>
+                    <div data-page="Edit">
+                        <h2 class="text-center py-2 mb-0">Edit Page</h2>
+                        <p>
+                            To Edit an Amiibo, click the 'Edit Amiibo' button on the details page. The edit page displays a 
+                            form populated with that particular Amiibo's information. Editing some of the values in the fields 
+                            and clicking 'Confirm Changes' will edit that Amiibo.
+                        </p>
+                    </div>
+                    <div data-page="Delete">
+                        <h2 class="text-center py-2 mb-0">Delete Page</h2>
+                        <p>
+                            Instead of a separate made for the delete feature, I created a modal. 
+                            On the details page of any Amiibo, clicking the 'Delete Amiibo' button 
+                            will bring up the modal. Confirming will delete the Amiibo from the 
+                            database and bring you back to the Index page.
+                        </p>
                     </div>
                 </div>
-
-                <div class="card img-section">
-                    <img class="card-img-top " src="images/Amiibo_App/amiiboapi.PNG">
-                    <div class="card-body">
-                        <h5 class="card-title text-decoration-underline">Amiibo API</h5>
-                        <p class="card-text">For this page, I use AmiiboAPI to gather information about Amiibos based on
-                            search criteria and display them.</p>
-                    </div>
-                </div>
-
-                <div class="card img-section">
-                    <img class="card-img-top " src="images/Amiibo_App/webscraping.PNG">
-                    <div class="card-body">
-                        <h5 class="card-title text-decoration-underline">Web Scraping</h5>
-                        <p class="card-text">I use Beautiful Soup to gather select information from a website and
-                            display that info on this page.</p>
-                    </div>
-                </div>
-
-                <div class="card img-section">
-                    <img class="card-img-top " src="images/Amiibo_App/Details.PNG">
-                    <div class="card-body">
-                        <h5 class="card-title text-decoration-underline">Details Page</h5>
-                        <p class="card-text">Get more information about a certain Amiibo by visiting their Details page.
-                            Here you can edit or delete an Amiibo.</p>
-                    </div>
-                </div>
-
-                <div class="card img-section">
-                    <img class="card-img-top " src="images/Amiibo_App/Delete_modal.PNG">
-                    <div class="card-body">
-                        <h5 class="card-title text-decoration-underline">Delete Modal</h5>
-                        <p class="card-text">Instead of a Delete page, I opted for a modal that prompts you to confirm
-                            deletion.</p>
-                    </div>
-                </div>
-            </div> -->
-
-
-
-
+            </div>
 
         </div>
 

@@ -109,45 +109,45 @@ h1,h2,h3,h4,h5,h6 {
     font-family: arcade-classic;
 }
 
-.amiibo-carousel {
+.portfolio-carousel {
     margin-bottom: 40px;
 }
 
-.amiibo-carousel--container {
-    padding: 0 0 20px 0;
+.carousel-container {
+    padding: 0 0 50px 0;
 }
 
-.amiibo-control--prev, .amiibo-control--next {
+.portfolio-carousel-control--prev, .portfolio-carousel-control--next {
     width: 50px;
     background-color: transparent;
     transition: 0.15s;
 }
 
-.amiibo-control--prev:hover, .amiibo-control--next:hover {
+.portfolio-carousel-control--prev:hover, .portfolio-carousel-control--next:hover {
     background-color: rgba(50, 50, 50, 0.5);
 }
 
-.amiibo-control--prev {
+.portfolio-carousel-control--prev {
     left: -50px;
 }
 
-.amiibo-control--next {
+.portfolio-carousel-control--next {
     right: -50px;
 }
 
-.amiibo-indicators-list {
+.portfolio-carousel-indicators-list {
     bottom: -30px;
     align-items: center;
     margin-bottom: 0;
     height: 20px;
 }
 
-.amiibo-indicators-list > li {
+.portfolio-carousel-indicators-list > li {
     transition: 0.15s;
     height: 4px
 }
 
-.amiibo-indicators-list > li:hover {
+.portfolio-carousel-indicators-list > li:hover {
     height: 10px;
 }
 
@@ -160,17 +160,11 @@ h1,h2,h3,h4,h5,h6 {
     transition: 0.5s;
 }
 
-.amiibo-text--container {
-    
-}
-
-.amiibo-text--container > div {
+.portfolio-carousel--text-container > div {
     display: none;
     opacity: 0;
     transition: 0.25s;
 }
-
-
 
 
 .carousel-item.active:hover .gifffer-play-button {
@@ -296,10 +290,6 @@ h1.section-title {
 }
 
 @media (max-width: 991px) {
-    .amiibo-carousel--container {
-        padding: 0;
-    }
-
     h1.section-title {
         font-size: 5em;
     }
