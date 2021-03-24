@@ -51,7 +51,8 @@
             <div class="d-md-flex flex-column justify-content-center">
                 <h1 class="welcome-text mb-0 mb-md-3 mb-lg-4 mb-xl-5 d-none d-md-block">Welcome!</h1>
                 <p class="welcome-subtext text-left px-2">
-                    My name is Ryan Wilson and I am a Software Developer with experience in many technologies.
+                    My name is Ryan Wilson.  I'm a Software Developer with experience in many technologies.  I enjoy making 
+                    projects with the technologies that I am learning about
                     Currently, I'm a Product Owner for a C# .Net Framework project.
                     Take a look below to see some of my recent projects.
                 </p>
@@ -63,8 +64,9 @@
                 <h1 class="section-title position-relative">
                     My Projects
                     <div class="snap-to-element" id="projects"></div>
-                    <a href="#amiibo-app-button"><img class="jigglypuff-gif" src="./images/Amiibo_App/gifs/Jigglypuff.gif" /></a>
-                    <a href="#space-traders-button"><img class="spaceship-gif" src="./images/spaceship.gif" /></a>
+                    <a href="#amiibo-app-button"><img class="jigglypuff-gif" src="./images/Amiibo_App/gifs/Jigglypuff.gif" alt="jigglypuff" title="Amiibo App" /></a>
+                    <a href="#space-traders-button"><img class="spaceship-gif" src="./images/spaceship.gif" alt="space ship" title="Space Traders" /></a>
+                    <a href="#file-system-button"><img class="" src="./images/spaceship.gif" alt="command promt" title="File System" /></a>
                 </h1>
             </div>
 
@@ -77,7 +79,7 @@
             <!-- Button -->
             <div class="text-center mx-auto pt-5 pt-md-3 position-relative">
                 <div class="snap-to-element-2" id="amiibo-app-button"></div>
-                <div id="amiibo-app-button" class="subsection-title btn-main--container" data-text="Amiibo App"
+                <div class="subsection-title btn-main--container" data-text="Amiibo App"
                     data-href="https://github.com/RyanLawWilson/AmiiboCollector" data-variant-danger></div>
             </div>
 
@@ -223,7 +225,7 @@
             <!-- Button -->
             <div class="text-center mx-auto pt-5 pt-md-3 position-relative">
                 <div class="snap-to-element-2" id="space-traders-button"></div>
-                <div id="amiibo-app-button" class="subsection-title btn-main--container" data-text="Space Traders"
+                <div class="subsection-title btn-main--container" data-text="Space Traders"
                     data-href="https://github.com/RyanLawWilson/space-traders" data-variant-primary></div>
             </div>
 
@@ -232,11 +234,10 @@
                 <!-- Heading text | Overview of the Project -->
                 <div class="col-12 col-lg-10 col-xl-8 mx-auto pb-4">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Voluptate nostrum hic nihil mollitia sunt ullam necessitatibus
-                        sit est iste, cumque praesentium, magnam amet saepe dignissimos
-                         cupiditate atque, laboriosam assumenda maiores.
-                         <a href="https://spacetraders.io/#how-to-play-guide">Space Traders</a>
+                        <strong><i>[Still in Development]</i></strong> A React app that serves as a User Interface for 
+                        an online API-based game called <a href="https://spacetraders.io/#what-s-the-game" target="_blank">Space Traders</a>.
+                        Players can create an account, log in, buy space ships, travel across the galaxy, and trade resources.  To communicate 
+                        with the API, I use the <a href="https://www.npmjs.com/package/axios" target="_blank">Axios</a> package.
                     </p>
                 </div>
 
@@ -245,20 +246,20 @@
                     <div id="space-traders-indicators" class="carousel slide portfolio-carousel" data-ride="carousel" data-carousel-name="Space Traders">
                         <ol class="carousel-indicators portfolio-carousel-indicators-list">
                             <li data-target="#space-traders-indicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#space-traders-indicators" data-slide-to="1"></li>
-                            <li data-target="#space-traders-indicators" data-slide-to="2"></li>
+                            <!-- <li data-target="#space-traders-indicators" data-slide-to="1"></li>
+                            <li data-target="#space-traders-indicators" data-slide-to="2"></li> -->
                         </ol>
 
                         <div class="carousel-inner">
-                            <div data-page="TEMP1" class="carousel-item active">
-                                <img class="d-block w-100" src="./images/Amiibo_App/gifs/API.gif" />
+                            <div data-page="Loans" class="carousel-item active">
+                                <img class="d-block w-100" src="./images/Space-Traders/Loans.PNG" />
                             </div>
-                            <div data-page="TEMP2" class="carousel-item">
+                            <!-- <div data-page="TEMP2" class="carousel-item">
                                 <img class="d-block w-100" src="./images/Amiibo_App/gifs/BS_Scrape.gif" />
                             </div>
                             <div data-page="TEMP3" class="carousel-item">
                                 <img class="d-block w-100" src="./images/Amiibo_App/gifs/Index.gif" />
-                            </div>
+                            </div> -->
                         </div>
 
                         <a class="carousel-control-prev portfolio-carousel-control--prev" href="#space-traders-indicators" role="button"
@@ -276,12 +277,12 @@
 
                 <!-- Text Content for Carousel -->
                 <div class="col-12 col-lg-10 col-xl-8 mx-auto portfolio-carousel--text-container" data-associated-carousel="Space Traders">
-                    <div data-page="TEMP1" style="opacity: 1; display: block">
-                        <h2 class="text-center py-2 mb-0">TEMP1 Page</h2>
+                    <div data-page="Loans" style="opacity: 1; display: block">
+                        <h2 class="text-center py-2 mb-0">Loans</h2>
                         <p>
-                            1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium placeat 
-                            debitis deserunt molestiae eum voluptates consequatur quisquam quis possimus 
-                            eaque. Accusantium dignissimos vitae sapiente odio minus saepe ab quod nisi.
+                            You start the game with no money.  To get started, players need to take out a loan to 
+                            buy a ship.  This dashboard shows the loans available for the player.  After the loan term, 
+                            the loan needs to be paid off plus interest.
                         </p>
                     </div>
                     <div data-page="TEMP2">
@@ -302,6 +303,99 @@
                     </div>
                 </div>
             </div>
+
+
+
+
+            <!-----------------------
+
+                File System Area
+
+            ------------------------>
+
+            <!-- Button -->
+            <div class="text-center mx-auto pt-5 pt-md-3 position-relative">
+                <div class="snap-to-element-2" id="file-system-button"></div>
+                <div class="subsection-title btn-main--container" data-text="File System"
+                    data-href="https://github.com/RyanLawWilson/FileSystem" data-variant-success></div>
+            </div>
+
+            <div class="carousel-container">
+
+                <!-- Heading text | Overview of the Project -->
+                <div class="col-12 col-lg-10 col-xl-8 mx-auto pb-4">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis nam, illo tempore 
+                        veniam debitis labore. Debitis dolorum assumenda iure, id repellat excepturi 
+                        ipsam aliquam quae, ad vitae consequuntur laudantium temporibus!
+                    </p>
+                </div>
+
+                <!-- Space Traders Carousel -->
+                <div class="col-12 col-lg-10 col-xl-8 mx-auto px-5">
+                    <div id="file-system-indicators" class="carousel slide portfolio-carousel" data-ride="carousel" data-carousel-name="Space Traders">
+                        <ol class="carousel-indicators portfolio-carousel-indicators-list">
+                            <li data-target="#file-system-indicators" data-slide-to="0" class="active"></li>
+                            <!-- <li data-target="#file-system-indicators" data-slide-to="1"></li>
+                            <li data-target="#file-system-indicators" data-slide-to="2"></li> -->
+                        </ol>
+
+                        <div class="carousel-inner">
+                            <div data-page="abc" class="carousel-item active">
+                                <img class="d-block w-100" src="./images/file-system/Loans.PNG" />
+                            </div>
+                            <!-- <div data-page="TEMP2" class="carousel-item">
+                                <img class="d-block w-100" src="./images/Amiibo_App/gifs/BS_Scrape.gif" />
+                            </div>
+                            <div data-page="TEMP3" class="carousel-item">
+                                <img class="d-block w-100" src="./images/Amiibo_App/gifs/Index.gif" />
+                            </div> -->
+                        </div>
+
+                        <a class="carousel-control-prev portfolio-carousel-control--prev" href="#file-system-indicators" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next portfolio-carousel-control--next" href="#file-system-indicators" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Text Content for Carousel -->
+                <div class="col-12 col-lg-10 col-xl-8 mx-auto portfolio-carousel--text-container" data-associated-carousel="Space Traders">
+                    <div data-page="abc" style="opacity: 1; display: block">
+                        <h2 class="text-center py-2 mb-0">abc</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim excepturi quo 
+                            rerum nemo reiciendis. Quia illo necessitatibus eum ducimus cum quisquam a 
+                            beatae saepe. Tempore officia laborum veniam eligendi explicabo.
+                        </p>
+                    </div>
+                    <div data-page="TEMP2">
+                        <h2 class="text-center py-2 mb-0">TEMP2 Page</h2>
+                        <p>
+                            2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium placeat 
+                            debitis deserunt molestiae eum voluptates consequatur quisquam quis possimus 
+                            eaque. Accusantium dignissimos vitae sapiente odio minus saepe ab quod nisi.
+                        </p>
+                    </div>
+                    <div data-page="TEMP3">
+                        <h2 class="text-center py-2 mb-0">TEMP3 Page</h2>
+                        <p>
+                            3 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium placeat 
+                            debitis deserunt molestiae eum voluptates consequatur quisquam quis possimus 
+                            eaque. Accusantium dignissimos vitae sapiente odio minus saepe ab quod nisi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
 
         </div>
 
