@@ -104,7 +104,7 @@ h1,h2,h3,h4,h5,h6 {
 **********************/
 
 .my-projects--heading {
-    padding: 1rem 0 5rem 0;
+    padding: 1rem 0 2rem 0;
     text-align: center;
     font-family: arcade-classic;
 }
@@ -263,12 +263,13 @@ h1.section-title {
     font-size: 1.5em;
 }
 
-.jigglypuff-gif, .spaceship-gif {
-    width: 150px;
+.jigglypuff-gif, .spaceship-gif, .filesystem-gif {
+    --project-gif-width: 150px;
+    width: var(--project-gif-width);
     position: absolute;
     top: 40%;
-    transform: translateY(-50%);
     cursor: pointer;
+    transform: translateY(-50%);
 }
 
 .jigglypuff-gif {
@@ -278,10 +279,16 @@ h1.section-title {
 .spaceship-gif {
     left: -140px;
     transform: rotate(-20deg) translateY(-50%);
-    animation: spaceship infinite 2000ms alternate ease-in-out;
+    animation: spaceship-tilt infinite 2000ms alternate ease-in-out;
 }
 
-@keyframes spaceship {
+.filesystem-gif {
+    right: -320px;
+    top: 50%;
+    border-radius: 5px;
+}
+
+@keyframes spaceship-tilt {
     0% {
         transform: rotate(-20deg) translateY(-50%);
     }
@@ -290,7 +297,49 @@ h1.section-title {
     }
 }
 
-@media (max-width: 991px) {
+@keyframes spaceship {
+    0% {
+        transform: translateY(-50%);
+    }
+    100% {
+        transform: translateY(calc(-50% + 20px));
+    }
+}
+
+/* This is here to accomodate  */
+@media (max-width: 1350px) {
+
+    .my-projects--heading {
+        padding-bottom: 5rem;
+    }
+
+    .jigglypuff-gif, .spaceship-gif, .filesystem-gif {
+        top: 69%;
+        transform: none;
+        margin: auto;
+    }
+
+    .jigglypuff-gif {
+        right: 0;
+        left: -320px;
+    }
+
+    .spaceship-gif {
+        top: 123%;
+        right: 10px;
+        left: 0;
+        animation: spaceship infinite 2000ms alternate ease-in-out;
+    }
+
+    .filesystem-gif {
+        top: 90%;
+        right: -320px;
+        left: 0;
+    }
+}
+
+
+/* @media (max-width: 991px) {
     h1.section-title {
         font-size: 5em;
     }
@@ -308,9 +357,13 @@ h1.section-title {
         left: -93px;
         top: 38%;
     }
-}
+} */
 
 @media (max-width: 767px) {
+    .my-projects--heading {
+        padding-bottom: 3rem;
+    }
+
     .profile-section .welcome-text {
         font-size: 5em;
     }
@@ -336,24 +389,37 @@ h1.section-title {
         font-size: 1.25em;
     }
 
-    .jigglypuff-gif, .spaceship-gif { 
+    .jigglypuff-gif, .spaceship-gif, .filesystem-gif {
         width: 100px;
+        top: 69%;
+        transform: none;
+        margin: auto;
     }
 
     .jigglypuff-gif {
-        right: 83px;
-        top: 77%;
-        transform: none;
+        right: 0;
+        left: -210px;
     }
 
     .spaceship-gif {
-        left: 103px;
-        top: 129%;
-        transform: none;
+        top: 123%;
+        right: 10px;
+        left: 0;
+        animation: spaceship infinite 2000ms alternate ease-in-out;
+    }
+
+    .filesystem-gif {
+        top: 90%;
+        right: -210px;
+        left: 0;
     }
 }
 
 @media (max-width: 500px) {
+    .my-projects--heading {
+        padding-bottom: 1rem;
+    }
+
     .profile-section .welcome-text {
         font-size: 3em;
     }
@@ -367,20 +433,29 @@ h1.section-title {
         font-size: 1.00em;
     }
 
-    .jigglypuff-gif, .spaceship-gif { 
-        width: 80px;
+    .jigglypuff-gif, .spaceship-gif, .filesystem-gif {
+        width: 75px;
+        top: 69%;
+        transform: none;
+        margin: auto;
     }
 
     .jigglypuff-gif {
-        right: 20%;
-        top: 72%;
-        transform: none;
+        right: 0;
+        left: -160px;
     }
 
     .spaceship-gif {
-        left: 24%;
-        top: 127%;
-        transform: none;
+        top: 123%;
+        right: 5px;
+        left: 0;
+        animation: spaceship infinite 2000ms alternate ease-in-out;
+    }
+
+    .filesystem-gif {
+        top: 90%;
+        right: -160px;
+        left: 0;
     }
 }
 
