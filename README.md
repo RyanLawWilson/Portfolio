@@ -3,7 +3,7 @@
 </h1>
 
 <h3 align="center">
-    ryan.law.wilson@gmail.com &#9670; (801) 574-4108 <br>
+    ryan.law.wilson@gmail.com<br>
     <a href="https://github.com/RyanLawWilson">GitHub</a> &#9670;
     <a href="https://ryanlawwilson.github.io/Portfolio/">Portfolio</a> &#9670;
     <a href="https://www.linkedin.com/in/ryan-wilson-879263104/">LinkedIn</a>
