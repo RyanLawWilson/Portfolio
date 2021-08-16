@@ -14,7 +14,7 @@
 
 ## **My Skills**
 
-<p style="text-align: center; padding: 0 10%; font-size: 1.25em">C# &nbsp;&#9642;&nbsp; .NET Framework &nbsp;&#9642;&nbsp; Visual Studio &nbsp;&#9642;&nbsp; Python &nbsp;&#9642;&nbsp; Django &nbsp;&#9642;&nbsp; JavaScript &nbsp;&#9642;&nbsp; jQuery &nbsp;&#9642;&nbsp; SQL &nbsp;&#9642;&nbsp; HTML &nbsp;&#9642;&nbsp; CSS &nbsp;&#9642;&nbsp; Bootstrap &nbsp;&#9642;&nbsp; Scrum &nbsp;&#9642;&nbsp; Azure Devops &nbsp;&#9642;&nbsp; Git</p>
+<p style="text-align: center; padding: 0 10%; font-size: 1.25em">C# &nbsp;&#9642;&nbsp; .NET Framework &nbsp;&#9642;&nbsp; Visual Studio &nbsp;&#9642;&nbsp; Python &nbsp;&#9642;&nbsp; Django &nbsp;&#9642;&nbsp; JavaScript &nbsp;&#9642;&nbsp; jQuery &nbsp;&#9642;&nbsp; SQL &nbsp;&#9642;&nbsp; HTML &nbsp;&#9642;&nbsp; CSS &nbsp;&#9642;&nbsp; Bootstrap &nbsp;&#9642;&nbsp; Scrum &nbsp;&#9642;&nbsp; Azure Devops &nbsp;&#9642;&nbsp; Git &nbsp;&#9642;&nbsp; VB.Net &nbsp;&#9642;&nbsp; React &nbsp;&#9642;&nbsp; TypeScript </p>
 
 
 ## **Work Experience**
